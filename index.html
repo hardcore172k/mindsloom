@@ -1,0 +1,494 @@
+<DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" />
+    <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+    <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Intro -->
+    <div id="intro-loader">
+      <div class="intro-logo">
+        <h1 class="company-title">
+          MindsL<span class="o">o</span><span class="o">o</span>m
+        </h1>
+        <audio id="typing-sound" src="typing-sound.mp3" preload="auto"></audio>
+        <div class="moto-container">
+          <h2 class="moto">Where Minds Weave and Ideas Intertwine</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+
+    <header>
+      <div class="left_container">
+        <a href="index.html" class="left_elements">Home</a>
+        <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
+          class="left_elements" target="_blank">
+          <img src="fb icon.svg" alt="Icon" width="20" height="20" />
+        </a>
+        <a href="https://www.instagram.com/mindsloom2024" class="left_elements" target="_blank">
+          <img src="insta icon.svg" alt="Icon" width="20" height="20" />
+        </a>
+        <a href="https://www.linkedin.com/company/mindsloom/" class="left_elements" target="_blank">
+          <img src="linkedin icon.svg" alt="Icon" width="20" height="20" />
+        </a>
+        <a href="https://x.com/mindsloom" class="left_elements" target="_blank">
+          <img src="twitter icon.svg" alt="Icon" width="20" height="20" />
+        </a>
+      </div>
+      <div class="logo">
+        <img class="company-logo" alt="" src="company-logo.png" />
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services-section">Services</a></li>
+          <li><a href="ailoom.html">AI Loom</a></li>
+          <li><a href="#blog-button">Blogs</a></li>
+          <li><a href="#contact-section">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+
+    <main>
+      <!-- Hero Section -->
+      <section id="hero-section">
+        <div class="hero-container">
+          <div class="hero-wrapper-1">
+            <h1 class="hero-heading">
+              <span id="hero-head1" class="hero-head">Smart Development,</span>
+              <span id="hero-head2" class="hero-head"> Strategic Marketing</span>
+              <span id="hero-head3" class="hero-head"> & AI Solutions</span>
+            </h1>
+            <h2 class="hero-subheading">We help startups, entrepreneurs, and growing businesses
+              build high-converting websites, ROI-driven marketing funnels and AI-powered solutions,
+              engineered for faster growth, better performance, and measurable results.
+            </h2>
+            <div class="hero-btns-container">
+              <div class="quote-btn-container">
+                <button id="get-quote-btn" class="quote-btn" onclick="window.location.href='#'">
+                  Get a Custom Quote
+                </button>
+              </div>
+              <div class="contact-btn-container">
+                <button class="contact-btn" onclick="window.location.href='#'">
+                  Talk to a Strategist
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="hero-wrapper-2">
+            <div class="hero-image-container">
+              <div class="mobile-float-wrapper">
+                <div id="mobile-frame">
+                  <img src="tab.png" alt="Mobile Frame" class="mobile-img" />
+                  <video class="mobile-video" autoplay muted loop playsinline>
+                    <source src="tab-video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="quote-wrapper" class="wrapper-quote">
+            <div class="quote-content">
+              <span class="close-btn">&times;</span>
+              <h2 class="quote-heading">Request a Quote</h2>
+              <form id="quote-form">
+                <input type="text" name="name" placeholder="Full Name" required />
+                <input type="email" name="email" placeholder="E-Mail ID*" required />
+                <input type="tel" name="contact" placeholder="Contact Number*" required />
+                <textarea name="details" placeholder="Describe Your Project/Idea In Brief" required></textarea>
+
+                <label for="captcha" class="captcha-label">7 + 5 =</label>
+                <input type="number" name="captcha" id="captcha" placeholder="Your Answer" required />
+
+                <button type="submit">Submit</button>
+
+                <p class="response-time">In Just <strong>30 min</strong> You Will Get A Response</p>
+            </div>
+          </div>
+      </section>
+
+      <!--Service Section-->
+
+      <section id="services-section">
+        <h2 id="services-heading" class="services-included">
+          Services Included
+        </h2>
+        <!-- Swiper Slider Container -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="card-sec2"></div>
+              <div class="top-card">
+                <img class="top-card-img" src="market.png" alt="AI Solutions" />
+              </div>
+              <div class="content-card">
+                <h2 class="card-heading">Marketing</h2>
+                <p class="card-content">
+                  Looking for Marketing Services That Actually Deliver?
+                  Explore what’s working right now:
+                  Digital Marketing, Social Media Marketing, Influencer & UGC Campaigns,
+                  Performance Marketing, Brand Strategy That Converts.
+                </p>
+              </div>
+              <div class="get-started-btn">
+                <button class="get-started" onclick="window.location.href='#'">
+                  Get Started
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-sec2"></div>
+              <div class="top-card">
+                <img class="top-card-img" src="dev.png" alt="AI Solutions" />
+              </div>
+              <div class="content-card">
+                <h2 class="card-heading">Development</h2>
+                <p class="card-content">
+                  Your Idea Deserves Better Than a Freelance Frankenstein Build.
+                  Web & Mobile Development, SaaS MVPs, Landing Pages, E-commerce
+                  Backend Systems, Custom Dashboards.
+                  You’ve got the idea. The vision’s clear. But what’s slowing you down?
+                </p>
+              </div>
+              <div class="get-started-btn">
+                <button class="get-started" onclick="window.location.href='#'">
+                  Get Started
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-sec2"></div>
+              <div class="top-card">
+                <img class="top-card-img" src="Ai.png" alt="AI Solutions" />
+              </div>
+              <div class="content-card">
+                <h2 class="card-heading">AI SOLUTIONS</h2>
+                <p class="card-content">
+                  If AI Isn’t Saving You Time or Making You Money - You’re Using It Wrong.
+                  GPT Bots, Process Automation, CRM Workflows, AI Dashboards, Smart Content Engines, Internal AI
+                  Assistants
+                  The right AI system doesn’t replace your team. It scales your brain.
+                  It buys back your time. It runs things while you sleep.
+                </p>
+              </div>
+              <div class="get-started-btn">
+                <button class="get-started" onclick="window.location.href='#'">
+                  Get Started
+                </button>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card-sec2"></div>
+              <div class="top-card">
+                <img class="top-card-img" src="market.png" alt="AI Solutions" />
+              </div>
+              <div class="content-card">
+                <h2 class="card-heading">Marketing</h2>
+                <p class="card-content">
+                  Looking for Marketing Services That Actually Deliver?
+                  Explore what’s working right now:
+                  Digital Marketing, Social Media Marketing, Influencer & UGC Campaigns,
+                  Performance Marketing, Brand Strategy That Converts.
+                </p>
+              </div>
+              <div class="get-started-btn">
+                <button class="get-started" onclick="window.location.href='#'">
+                  Get Started
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pagination & Navigation -->
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!--About Us Section-->
+
+      <section id="about-us">
+        <div class="about-us1">
+          <!-- Founder Block -->
+          <div class="about-us1-content-warpper active" id="founder-wrapper">
+            <div class="about-us1-bg founder-3d-container">
+              <img class="about-us1-img founder-3d-rotate" src="founder-img.png" alt="Founder Image" />
+            </div>
+            <div class="left-heading">
+              <h2 class="left-topic-head">Founder’s Note</h2>
+              <b class="left-topic-subhead">From the desk of the one who started it all.</b>
+            </div>
+          </div>
+
+          <!-- Story Block -->
+          <div class="about-us1-content-warpper" id="story-wrapper">
+            <div class="about-us1-bg founder-3d-container">
+              <img class="about-us1-img founder-3d-rotate" src="story.png" alt="Founder Image" />
+            </div>
+            <div class="left-heading">
+              <h2 class="left-topic-head">Our Story</h2>
+              <b class="left-topic-subhead">What We Believe, What We Build</b>
+            </div>
+          </div>
+
+
+          <!-- Mission Block -->
+          <div class="about-us1-content-warpper" id="mission-wrapper">
+            <div class="about-us1-bg founder-3d-container">
+              <img class="about-us1-img founder-3d-rotate" src="story.png" alt="Founder Image" />
+            </div>
+            <div class="left-heading">
+              <h2 class="left-topic-head">Our Mission</h2>
+              <p class="mission-subhead">To become the world’s most <br>
+                trusted growth partner</p>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="about-us2">
+          <!-- Founder Content -->
+          <div class="about-us2-content active" id="founder-content">
+            <p class="about-us2-text"><span class="comma">❝</span>
+              Welcome to MindsLoom, where we weave together creativity and
+              technology to craft exceptional digital experiences. Our journey
+              began with a simple idea: to empower businesses with innovative
+              solutions that drive growth and success. With a team of passionate
+              professionals, we are dedicated to delivering high-quality services
+              that exceed expectations. Join us as we continue to explore new
+              horizons and create a brighter future together.<span class="comma">❞</span>
+            </p>
+          </div>
+
+          <!-- Story Content -->
+          <div class="about-us2-content" id="story-content">
+            <p class="about-us2-text">
+              We believe that ideas aren’t just thoughts — they’re threads.
+              And when woven with purpose, empathy, intelligence, and design — they become movements.
+              At MindsLoom, we exist to turn those threads into real-world outcomes.
+              <br><br>
+              We’ve:
+              <br><br>
+            <ul>
+              <li>Launched marketing systems that scaled 200% in under 60 days.</li>
+              <li>Web apps for startups that closed funding within weeks.</li>
+              <li>Deployed AI tools that saved teams 40% of their operations cost.</li>
+              <li>Transformed messy product ideas into polished, profitable brands.</li>
+            </ul>
+            <br><br>
+            But more than what we’ve built, it’s how we build that makes us different.
+            While most agencies sell “services,” we craft intelligent growth systems.
+            <br><br>
+            <ul>
+              <li>We don’t just run ads. We build entire performance loops.</li>
+              <li>We don’t just code. We architect scalable platforms.</li>
+              <li>We don’t just automate. We build AI that thinks alongside your team.</li>
+            </ul>
+            <br><br>
+            We’re the team that founders call when they say: “We need this to actually work this time.”
+            </p>
+          </div>
+
+          <!-- Mission Content -->
+          <div class="about-us2-content" id="mission-content">
+            <div class="mission-content-wrapper">
+              <p class="about-us2-text">We exist to:
+                <br><br>
+              <ul>
+                <li>Engineer marketing that performs like a machine but feels like art.</li>
+                <li>Code platforms that scale without crashing dreams.</li>
+                <li>Integrate AI so it empowers humans—not replaces them.</li>
+              </ul>
+              <br><br>
+              Our mission isn’t to do more. It’s to help you do better—faster, smarter, deeper.
+              And we’re just getting started.
+              <br><br>
+              What We Do:
+              <br><br>
+              <ul>
+                <li>Marketing that converts clicks into customers.</li>
+                <li>Development that turns your idea into a product.</li>
+                <li>AI Solutions that scale your business while you sleep.</li>
+              </ul>
+              <br><br>
+              Who We Work With
+              <br><br>
+              <ul>
+                <li>Startup founders who want to go from idea to execution—fast.</li>
+                <li>Established brands looking to digitize, scale, or automate.</li>
+                <li>Agencies and consultants who need white-labeled execution partners.</li>
+                <li>Creators and product makers launching in a competitive world.</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+
+          <button id="about-us-btn" class="about-us-btn" type="button">Next</button>
+        </div>
+
+        <div class="about-content">
+          <h2 class="about-us-heading">About Us</h2>
+        </div>
+      </section>
+
+
+      <!--Blogs Section-->
+
+      <section id="blog-section">
+        <div class="blog-wrapper-1">
+          <h2 class="blog-heading">Coming Soon</h2>
+        </div>
+        </div>
+        </div>
+        <div class="blog-wrapper-2">
+          <h2 class="our-blogs-title">
+            Blogs
+          </h2>
+        </div>
+      </section>
+
+    <!--Contact Us Section-->
+
+      <section id="contact-section">
+    <div class="contact-container">
+      <!-- Heading Section -->
+      <div class="form-heading">
+        <h2 class="contact-us">
+          <span>Contact </span>
+          <span class="connect">Us</span>
+        </h2>
+        <div class="we-are-at-container">
+          <p class="contact-desc-head">We are at your</p>
+          <p class="contact-desc-head">Service!</p>
+        </div>
+        <div class="contact-us-at">
+          <p class="contact-desc">
+            Contact us at business@mindsloom.com to collaborate on
+            interesting, well-researched, and SEO-optimized material.
+          </p>
+        </div>
+        <div class="whatsapp-button">
+          <div class="wa">
+            <div class="wa-child"></div>
+            <b class="whatsapp">WhatsApp</b>
+          </div>
+          <img class="whatsapp-1-1" alt="WhatsApp" src="whatsapp (1) 1.png" />
+        </div>
+      </div>
+
+      <!-- Form Section: Step 1 Basic Details -->
+      <div class="form-section">
+        <div class="form-container">
+          <form class="contact-form" id="contactFormStep1">
+            <div class="full-name">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="mail">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="mobile-number">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <button type="button" id="nextBtn">Next</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Popup for Step 2 -->
+  <div class="modal-overlay" id="formModal">
+    <div class="modal-content">
+      <span class="close-modal" id="closeModal">×</span>
+      <form class="contact-form" id="contactFormStep2">
+        <div class="company-name">
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" />
+        </div>
+        <div class="project-type">
+          <label for="services">Services Interested In *</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="services" value="Branding"> Branding</label>
+            <label><input type="checkbox" name="services" value="Web Design"> Web Design</label>
+            <label><input type="checkbox" name="services" value="SEO"> SEO</label>
+            <label><input type="checkbox" name="services" value="Social Media"> Social Media</label>
+            <label><input type="checkbox" name="services" value="Paid Ads"> Paid Ads</label>
+          </div>
+        </div>
+        <div class="project-cost">
+          <label for="budget">Budget Range *</label>
+          <select id="budget" name="budget" required>
+            <option value="">-- Select Budget --</option>
+            <option value="< ₹50K">< ₹50K</option>
+            <option value="₹50K – ₹1L">₹50K – ₹1L</option>
+            <option value="₹1L+">₹1L+</option>
+          </select>
+        </div>
+        <div class="project-timeline">
+          <label for="timeline">Project Timeline *</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">-- Select Timeline --</option>
+            <option value="ASAP">ASAP</option>
+            <option value="1-3 months">1–3 months</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        </div>
+        <div class="website-link">
+          <label for="website">Website URL</label>
+          <input type="url" id="website" name="website" placeholder="https://example.com" />
+        </div>
+        <div class="referral-source">
+          <label for="referral">How did you hear about us?</label>
+          <input type="text" id="referral" name="referral" />
+        </div>
+        <div class="contact-type">
+          <label for="contact-method">Preferred Contact Method</label>
+          <label><input type="radio" name="contact_method" value="Email" checked> Email</label>
+          <label><input type="radio" name="contact_method" value="Phone"> Phone</label>
+          <label><input type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label>
+        </div>
+        <div class="file-upload">
+          <label for="file">Upload Brief / File (optional)</label>
+          <input type="file" id="file" name="file" />
+        </div>
+        <div class="project-message">
+          <label for="message">Message / Project Description *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="button" id="submitBtn">Submit</button>
+        <div class="success-message" id="successMessage">Thanks! We'll get back to you within 10 minutes.</div>
+      </form>
+    </div>
+  </div>
+    </main>
+    <!-- Footer -->
+    <footer></footer>
+    <!-- Include EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+
+  </html>
