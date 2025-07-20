@@ -1248,15 +1248,6 @@ button#submitBtn:hover {
 /* Media Queries */
 
 @media (min-width: 1000px) and (max-width: 1430px) {
-  #hero-section,
-  #services-section,
-  #about-us,
-  #blog-secion,
-  #contact-section {
-    height: 80vh;
-    min-height: 80vh;
-  }
-
   .company-title {
     font-size: 6.25rem;
     line-height: 7.35rem;
