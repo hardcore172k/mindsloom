@@ -1,3 +1,49 @@
+//Navbar dropdown functionality
+
+document.addEventListener("DOMContentLoaded", function () {
+  const mobileMenuToggle = document.getElementById("mobileMenuToggle");
+  const mobileDropdown = document.getElementById("mobileDropdown");
+  const mobileCloseBtn = document.getElementById("mobileCloseBtn");
+
+  function openMobileMenu() {
+    mobileDropdown.classList.add("show");
+  }
+
+  function closeMobileMenu() {
+    mobileDropdown.classList.remove("show");
+  }
+
+  mobileMenuToggle.addEventListener("click", function (e) {
+    e.stopPropagation();
+    openMobileMenu();
+  });
+
+  mobileCloseBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    closeMobileMenu();
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener("click", function (e) {
+    if (
+      !mobileDropdown.contains(e.target) &&
+      !mobileMenuToggle.contains(e.target)
+    ) {
+      closeMobileMenu();
+    }
+  });
+
+  // Close dropdown when clicking on a navigation link
+  const dropdownLinks = mobileDropdown.querySelectorAll("a");
+  dropdownLinks.forEach((link) => {
+    link.addEventListener("click", function () {
+      closeMobileMenu();
+    });
+  });
+});
+
+//***********************************************************************************************************************/
+
 //logo-header size change on scroll
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -8,11 +54,18 @@ document.addEventListener("DOMContentLoaded", function () {
     if (window.scrollY > 50) {
       header.style.zIndex = "1000";
       header.style.height = "10%";
-      logoImg.style.width = "18%";
+      if (logoImg) logoImg.style.width = "18%";
     } else {
-      header.style.zIndex = "1";
+      // Check if we're on mobile
+      if (window.innerWidth <= 768) {
+        // On mobile, keep high z-index always
+        header.style.zIndex = "50000";
+      } else {
+        // On desktop, reset to normal z-index
+        header.style.zIndex = "3";
+      }
       header.style.height = "fit-content";
-      logoImg.style.width = "25%";
+      if (logoImg) logoImg.style.width = "25%";
     }
   });
 });
@@ -165,7 +218,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //***********************************************************************************************************************/
 
-
 //About Us Section
 // This script handles the "About Us" section content switching
 
@@ -219,7 +271,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Proceed even if form1 is missing for testing
   if (!form1) {
-    console.warn("Warning: contactFormStep1 element not found. Modal will open without validation.");
+    console.warn(
+      "Warning: contactFormStep1 element not found. Modal will open without validation."
+    );
   }
 
   // Handle "Next" button click
@@ -233,7 +287,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Attempt to show modal
     formModal.style.display = "flex";
     document.body.style.overflow = "hidden";
-    console.log("Set formModal display to flex, new display:", formModal.style.display);
+    console.log(
+      "Set formModal display to flex, new display:",
+      formModal.style.display
+    );
 
     // Apply validation if form1 exists
     if (form1) {
@@ -259,11 +316,3 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Error: closeModal element not found.");
   }
 });
-
-
-
-
- 
-
-
-

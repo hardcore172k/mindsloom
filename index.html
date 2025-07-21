@@ -34,34 +34,82 @@
     <!-- Header -->
 
     <header>
-      <div class="left_container">
-        <a href="index.html" class="left_elements">Home</a>
-        <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
-          class="left_elements" target="_blank">
-          <img src="fb icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a href="https://www.instagram.com/mindsloom2024" class="left_elements" target="_blank">
-          <img src="insta icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a href="https://www.linkedin.com/company/mindsloom/" class="left_elements" target="_blank">
-          <img src="linkedin icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a href="https://x.com/mindsloom" class="left_elements" target="_blank">
-          <img src="twitter icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-      </div>
-      <div class="logo">
-        <img class="company-logo" alt="" src="company-logo.png" />
-      </div>
-      <nav aria-label="Main navigation">
-        <ul>
-          <li><a href="#about-us">About Us</a></li>
-          <li><a href="#services-section">Services</a></li>
-          <li><a href="ailoom.html">AI Loom</a></li>
-          <li><a href="#blog-button">Blogs</a></li>
-          <li><a href="#contact-section">Contact Us</a></li>
-        </ul>
-      </nav>
+        <div class="left_container">
+            <a href="index.html" class="left_elements">Home</a>
+            <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
+              class="left_elements" target="_blank">
+              <img src="fb icon.svg" alt="Icon" width="20" height="20" />
+            </a>
+            <a href="https://www.instagram.com/mindsloom2024" class="left_elements" target="_blank">
+                <img src="insta icon.svg" alt="Icon" width="20" height="20" />
+            </a>
+            <a href="https://www.linkedin.com/company/mindsloom/" class="left_elements" target="_blank">
+                <img src="linkedin icon.svg" alt="Icon" width="20" height="20" />
+            </a>
+            <a href="https://x.com/mindsloom" class="left_elements" target="_blank">
+                <img src="twitter icon.svg" alt="Icon" width="20" height="20" />
+            </a>
+        </div>
+        
+        <div class="logo">
+            <img class="company-logo" alt="" src="company-logo.png" />
+        </div>
+
+        <!-- Add mobile logo for mobile view -->
+        <div class="mobile-logo">
+            <img class="company-logo" alt="MindsLoom Logo" src="company-logo.png" style="width: 50px; height: auto;" />
+        </div>
+        
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about-us">About Us</a></li>
+                <li><a href="#services-section">Services</a></li>
+                <li><a href="ailoom.html">AI Loom</a></li>
+                <li><a href="#blog-button">Blogs</a></li>
+                <li><a href="#contact-section">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!-- Add mobile menu toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+            ☰
+        </button>
+
+        <!-- Add simple mobile dropdown -->
+        <div class="mobile-dropdown" id="mobileDropdown">
+            <div class="mobile-dropdown-header">
+                <img class="mobile-dropdown-logo" alt="MindsLoom Logo" src="company-logo.png" />
+                <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close mobile menu">
+                    ✕
+                </button>
+            </div>
+            
+            <div class="mobile-dropdown-content">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#services-section">Services</a></li>
+                    <li><a href="ailoom.html">AI Loom</a></li>
+                    <li><a href="#blog-button">Blogs</a></li>
+                    <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+
+                <div class="mobile-social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank">
+                        <img src="fb icon.svg" alt="Facebook" />
+                    </a>
+                    <a href="https://www.instagram.com/mindsloom2024" target="_blank">
+                        <img src="insta icon.svg" alt="Instagram" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/mindsloom/" target="_blank">
+                        <img src="linkedin icon.svg" alt="LinkedIn" />
+                    </a>
+                    <a href="https://x.com/mindsloom" target="_blank">
+                        <img src="twitter icon.svg" alt="Twitter" />
+                    </a>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -218,7 +266,6 @@
             </div>
           </div>
 
-          <!-- Pagination & Navigation -->
           <div class="swiper-pagination"></div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
