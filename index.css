@@ -816,12 +816,12 @@ h2.services-included {
 }
 
 .top-card {
-  width: 45%;
+  width: 37%;
   height: 55%;
   position: absolute;
   background: #9ab7bc;
   top: 20%;
-  left: 45%;
+  left: 61%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1625,7 +1625,7 @@ button#submitBtn:hover {
   #about-us,
   #blog-section,
   #contact-section {
-    height: 70vh;
+    height: 85vh;
     min-height: 70vh;
   }
 
@@ -1782,7 +1782,7 @@ button#submitBtn:hover {
   #services-section,
   #about-us,
   #blog-section {
-    height: 45vh;
+    height: 63vh;
     min-height: 45vh;
   }
   #contact-section {
@@ -1871,7 +1871,7 @@ button#submitBtn:hover {
       #d9cbb2 90%,
       #f4eee0 100%
     );
-    height: 200px;
+    height: 206px;
   }
   .swiper-button-next,
   .swiper-button-prev,
@@ -1892,7 +1892,7 @@ button#submitBtn:hover {
     opacity: 0.3;
   }
   .card-heading {
-    font-size: 1.25rem;
+    font-size: 1rem;
     padding: 0.5px;
   }
   .content-card {
