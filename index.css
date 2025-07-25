@@ -1852,7 +1852,7 @@ button#submitBtn:hover {
   #services-section,
   #about-us,
   #blog-section {
-    height: 63vh;
+    height: 70vh;
     min-height: 45vh;
   }
   #contact-section {
@@ -2213,24 +2213,240 @@ button#submitBtn:hover {
 }
 /* Landscape phones and small tablets - ADD THIS */
 @media (max-width: 926px) and (orientation: landscape) {
+  /* Base section heights */
   #hero-section,
   #services-section,
   #about-us,
-  #blog-section {
+  #blog-section,
+  #contact-section {
     height: 100vh !important;
     min-height: 100vh !important;
+    overflow: hidden !important;
   }
 
+  /* Hero section fixes */
   .hero-heading {
     font-size: 1.8rem !important;
     line-height: 2.2rem !important;
   }
 
+  /* Services section landscape fixes */
+  #services-section {
+    padding: 10px 0 !important;
+    justify-content: flex-start !important;
+  }
+
+  h2.services-included {
+    font-size: 2.5rem !important;
+    margin: 1% 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    position: relative !important;
+    z-index: 10 !important;
+  }
+
+  .swiper {
+    width: 95vw !important;
+    height: 60vh !important;
+    margin: 2% auto !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  .swiper-slide {
+    height: 200px !important;
+  }
+
+  /* About us section landscape fixes */
+  #about-us {
+    flex-direction: row !important;
+    height: 100vh !important;
+  }
+
   .about-us1,
   .about-us2 {
-    height: 50vh !important;
+    width: 50% !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+  }
+
+  /* Fix about us content positioning */
+  .about-us1-content-warpper {
+    width: 90% !important;
+    height: 80% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+
+  .left-heading {
+    width: 100% !important;
+    margin-bottom: 10px !important;
+  }
+
+  .left-topic-head {
+    font-size: 1.8rem !important;
+    padding: 0.5rem !important;
+  }
+
+  .left-topic-subhead {
+    font-size: 0.9rem !important;
+    line-height: 1.2rem !important;
+    margin-top: 1rem !important;
+  }
+
+  .topic-content {
+    font-size: 0.85rem !important;
+    height: 200px !important;
+    overflow-y: auto !important;
+    width: 95% !important;
+    margin-top: 1rem !important;
+  }
+
+  /* Fix about us right side content */
+  .about-us2-content {
+    width: 90% !important;
+    height: 80% !important;
+    font-size: 0.9rem !important;
+    line-height: 1.2rem !important;
+    overflow-y: auto !important;
+  }
+
+  #story-content,
+  #mission-content,
+  #founder-content {
+    font-size: 0.85rem !important;
+    line-height: 1.1rem !important;
+    height: 250px !important;
+    overflow-y: auto !important;
+    padding: 5px !important;
+  }
+
+  /* Fix about us button positioning */
+  .about-us-btn {
+    position: absolute !important;
+    bottom: 10px !important;
+    right: 20px !important;
+    font-size: 0.9rem !important;
+    height: 35px !important;
+    width: 80px !important;
+    z-index: 100 !important;
+  }
+
+  /* Fix About Us heading positioning */
+  .about-content {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) rotate(270deg) !important;
+    z-index: 5 !important;
+    width: max-content !important;
+  }
+
+  .about-us-heading {
+    font-size: 2.5rem !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+  }
+  #about-us {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Contact section landscape fixes */
+  #contact-section {
+    padding: 20px 0 !important;
+    overflow-y: auto !important;
+  }
+
+  .contact-container {
+    flex-direction: row !important;
+    width: 95% !important;
+    height: 90vh !important;
+  }
+
+  .form-heading {
+    width: 50% !important;
+    padding: 10px !important;
+  }
+
+  .form-section {
+    width: 50% !important;
+    height: 90% !important;
+  }
+
+  .form-container {
+    height: 85% !important;
+    overflow-y: auto !important;
+  }
+
+  h2.contact-us {
+    font-size: 2.5rem !important;
+  }
+
+  p.contact-desc-head {
+    font-size: 1.2rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  p.contact-desc {
+    font-size: 0.9rem !important;
+    line-height: 1.2rem !important;
+  }
+
+  /* Blog section landscape fixes */
+  .blog-heading {
+    font-size: 3rem !important;
+  }
+
+  .our-blogs-title {
+    font-size: 2rem !important;
+  }
+
+  /* Universal landscape safety */
+  body,
+  html {
+    overflow-x: hidden !important;
+  }
+
+  main {
+    overflow-x: hidden !important;
+  }
+
+  section {
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
   }
 }
+@media (max-width: 667px) and (orientation: landscape) {
+  h2.services-included {
+    font-size: 2rem !important;
+    margin: 0.5% 0 !important;
+  }
+
+  .swiper {
+    height: 50vh !important;
+  }
+
+  .left-topic-head {
+    font-size: 1.5rem !important;
+  }
+
+  .topic-content {
+    height: 150px !important;
+    font-size: 0.8rem !important;
+  }
+
+  #story-content,
+  #mission-content,
+  #founder-content {
+    height: 180px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
 /* Universal mobile safety - ADD THIS */
 @media (max-width: 767px) {
   section {
@@ -2246,5 +2462,209 @@ button#submitBtn:hover {
   .whatsapp-btn {
     min-height: 44px !important;
     padding: 8px 12px !important;
+  }
+}
+/* iPhone 14 Specific Optimizations - ADD THIS ENTIRE BLOCK */
+@media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  /* Header improvements */
+  header {
+    padding: 15px 25px !important;
+    height: 65px !important;
+    background: rgba(132, 145, 122, 0.95) !important;
+    backdrop-filter: blur(15px) !important;
+  }
+
+  /* Hero section improvements */
+  .hero-wrapper-1 {
+    padding-top: 85px !important;
+    width: 92% !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-heading {
+    font-size: 1.45rem !important;
+    line-height: 1.9rem !important;
+    text-align: center !important;
+    padding: 0.5rem !important;
+  }
+
+  .hero-subheading {
+    font-size: 0.95rem !important;
+    line-height: 1.25rem !important;
+    width: 85% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-btns-container {
+    justify-content: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    padding: 1rem 0 !important;
+  }
+
+  .quote-btn-container,
+  .contact-btn-container {
+    width: 8.5rem !important;
+    height: 2.2rem !important;
+  }
+
+  .quote-btn,
+  .contact-btn {
+    font-size: 0.85rem !important;
+    min-height: 48px !important;
+    padding: 12px 8px !important;
+  }
+
+  /* Services section improvements */
+  h2.services-included {
+    font-size: 1.9rem !important;
+    margin: 1.5rem 0 !important;
+    padding: 0 1rem !important;
+  }
+
+  .swiper {
+    width: 100vw !important;
+    height: 320px !important;
+    padding: 15px 0 !important;
+  }
+
+  .swiper-slide {
+    height: 240px !important;
+    margin: 0 5px !important;
+  }
+
+  /* About section improvements */
+  .left-topic-head {
+    font-size: 2.1rem !important;
+    padding: 0.8rem !important;
+  }
+
+  .about-us1-bg {
+    top: -8% !important;
+    width: 75% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .topic-content {
+    height: 13rem !important;
+    padding: 0.8rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* Contact section improvements */
+  h2.contact-us {
+    font-size: 2.3rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .form-container {
+    width: 95% !important;
+    padding: 20px !important;
+    margin: 1rem auto !important;
+  }
+
+  .whatsapp-btn {
+    width: 55% !important;
+    font-size: 0.85rem !important;
+    padding: 12px 8px !important;
+    min-height: 48px !important;
+  }
+
+  /* Ensure all touch targets meet iOS guidelines */
+  .get-started,
+  .about-us-btn,
+  button#nextBtn {
+    min-height: 48px !important;
+    font-size: 0.9rem !important;
+    padding: 12px 10px !important;
+  }
+}
+/* Target iPhone 14 390px viewport specifically - ADD THIS */
+@media (min-width: 390px) and (max-width: 390px) {
+  .hero-subheading {
+    width: 88% !important;
+    margin: 0 auto !important;
+    padding: 0.6rem !important;
+  }
+
+  .hero-btns-container {
+    justify-content: space-evenly !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .swiper {
+    padding: 12px 0 !important;
+  }
+
+  .card-content {
+    font-size: 0.72rem !important;
+    line-height: 0.95rem !important;
+    padding: 8px !important;
+  }
+
+  .form-heading {
+    padding: 1rem !important;
+  }
+
+  .contact-desc-head {
+    font-size: 1.2rem !important;
+    line-height: 1.5rem !important;
+  }
+
+  #hero-section,
+  #services-section,
+  #about-us,
+  #blog-section,
+  #contact-section {
+    min-height: 100vh !important;
+    padding: 0 15px !important;
+    box-sizing: border-box !important;
+  }
+
+  main {
+    margin-top: 75px !important;
+  }
+}
+@media (min-width: 456px) and (max-width: 647px) {
+  #services-section {
+    padding: 15px 0 !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  h2.services-included {
+    font-size: 2.2rem !important;
+    margin: 1rem 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+    order: 1 !important; /* Ensure it appears first */
+  }
+
+  .swiper {
+    width: 95vw !important;
+    height: 320px !important;
+    margin: 1rem auto !important;
+    position: relative !important;
+    order: 2 !important; /* Ensure it appears after heading */
+  }
+
+  .swiper-slide {
+    height: 260px !important;
+  }
+
+  .card-heading {
+    font-size: 1.1rem !important;
+  }
+
+  .card-content {
+    font-size: 0.8rem !important;
+    line-height: 1.1rem !important;
   }
 }
