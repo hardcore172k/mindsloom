@@ -1681,7 +1681,18 @@ button#submitBtn:hover {
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Media Queries for tablets and small screens */
+@media (min-width: 740px) and (max-width: 1024px) {
+  .about-us1-bg {
+    top: -20% !important;
+  }
 
+  .about-us1-bg {
+    top: -10% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    position: absolute !important;
+  }
+}
 @media (min-width: 740px) and (max-width: 999px) {
   #hero-section,
   #services-section,
