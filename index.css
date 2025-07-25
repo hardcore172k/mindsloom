@@ -1003,7 +1003,7 @@ h2.about-us-heading {
 .about-us1-bg {
   z-index: -1;
   position: absolute;
-  top: -150%;
+  top: -60%;
 }
 
 .about-us1-img {
@@ -1026,10 +1026,19 @@ h2.about-us-heading {
 }
 
 .left-topic-subhead {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   padding: 1rem;
   line-height: 1.8rem;
-  font-weight: bold;
+  margin-top: 3rem;
+}
+.topic-content {
+  font-size: 1rem;
+  color: white;
+  letter-spacing: 0.5px;
+  word-spacing: 2px;
+  width: 85%;
+  justify-self: center;
+  margin-top: 2rem;
 }
 
 .about-us2-content {
@@ -1577,14 +1586,68 @@ button#submitBtn:hover {
     font-size: 1.1rem;
     line-height: 1.5rem;
   }
-  #story-content {
+
+  #story-content,
+  #mission-content {
+    max-height: 28rem;
     font-size: 1.075rem;
     line-height: 1.4rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overflow-anchor: none;
+    scroll-behavior: auto;
+    display: block;
+    width: 85%;
+    height: 80%;
+    padding: 10px;
+
+    /* Thin scrollbar styling */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #8b7355 transparent; /* Firefox - thumb and track color */
   }
-  #mission-content {
+
+  /* Webkit browsers (Chrome, Safari, Edge) */
+  #story-content::-webkit-scrollbar,
+  #mission-content::-webkit-scrollbar {
+    width: 4px; /* Make scrollbar very thin */
+  }
+
+  #story-content::-webkit-scrollbar-track,
+  #mission-content::-webkit-scrollbar-track {
+    background: transparent; /* Hide the track */
+  }
+
+  #story-content::-webkit-scrollbar-thumb,
+  #mission-content::-webkit-scrollbar-thumb {
+    background: #8b7355; /* Brown color matching your theme */
+    border-radius: 2px;
+    opacity: 0.7;
+  }
+
+  #story-content::-webkit-scrollbar-thumb:hover,
+  #mission-content::-webkit-scrollbar-thumb:hover {
+    background: #6b5635; /* Darker brown on hover */
+    opacity: 1;
+  }
+
+  /* Ensure proper spacing for lists and paragraphs */
+  #story-content p,
+  #story-content ul,
+  #mission-content p,
+  #mission-content ul {
+    margin: 0 0 1rem 0;
+  }
+
+  /* Position the content containers properly within their parent */
+  .about-us2-content {
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    padding-top: 2rem;
+  }
+  /* #mission-content {
     font-size: 1.05rem;
     line-height: 1.4rem;
-  }
+  } */
 
   .blog-heading {
     font-size: 5.5rem;
@@ -1710,7 +1773,7 @@ button#submitBtn:hover {
     font-size: 2.4rem;
   }
   .left-topic-subhead {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.35rem;
   }
   .about-us2-content-wrapper {
@@ -1936,9 +1999,10 @@ button#submitBtn:hover {
   .about-us1,
   .about-us2 {
     width: 100%;
-    height: 63vh;
+    height: 75vh;
     display: flex;
   }
+
   .about-us2-content-wrapper {
     overflow-y: auto;
     box-sizing: border-box;
@@ -1958,6 +2022,14 @@ button#submitBtn:hover {
   .left-topic-subhead {
     font-size: 1rem;
     line-height: 1.35rem;
+  }
+  .topic-content {
+    font-size: 1rem;
+    color: white;
+    overflow-y: auto;
+    height: 14.5rem;
+    max-height: fit-content;
+    margin-top: 2rem;
   }
   #founder-content {
     font-size: 1rem;
@@ -1984,6 +2056,9 @@ button#submitBtn:hover {
   }
   .our-blogs-title {
     font-size: 2.75rem;
+  }
+  .about-us1-bg {
+    top: -11%;
   }
 
   .contact-container {
