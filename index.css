@@ -2487,7 +2487,47 @@ button#submitBtn:hover {
     padding: 8px 12px !important;
   }
 }
-/* iPhone 14 Specific Optimizations - ADD THIS ENTIRE BLOCK */
+@media (min-width: 456px) and (max-width: 647px) {
+  #services-section {
+    padding: 15px 0 !important;
+    justify-content: flex-start !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  h2.services-included {
+    font-size: 2.2rem !important;
+    margin: 1rem 0 !important;
+    text-align: center !important;
+    width: 100% !important;
+    padding: 0 1rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+    order: 1 !important; /* Ensure it appears first */
+  }
+
+  .swiper {
+    width: 95vw !important;
+    height: 320px !important;
+    margin: 1rem auto !important;
+    position: relative !important;
+    order: 2 !important; /* Ensure it appears after heading */
+  }
+
+  .swiper-slide {
+    height: 260px !important;
+  }
+
+  .card-heading {
+    font-size: 1.1rem !important;
+  }
+
+  .card-content {
+    font-size: 0.8rem !important;
+    line-height: 1.1rem !important;
+  }
+}
+/* iPhone 14 & iPhone 12 Pro Combined Optimizations */
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
   /* Header improvements */
   header {
@@ -2495,6 +2535,17 @@ button#submitBtn:hover {
     height: 65px !important;
     background: rgba(132, 145, 122, 0.95) !important;
     backdrop-filter: blur(15px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Main content adjustments */
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    margin-top: 75px !important;
   }
 
   /* Hero section improvements */
@@ -2557,7 +2608,23 @@ button#submitBtn:hover {
     margin: 0 5px !important;
   }
 
-  /* About section improvements */
+  /* About Us Section - Combined fixes */
+  #about-us {
+    width: 100vw !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    min-height: 100vh !important;
+    box-sizing: border-box !important;
+  }
+
+  .about-us1,
+  .about-us2 {
+    width: 100% !important;
+    height: 50vh !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
   .left-topic-head {
     font-size: 2.1rem !important;
     padding: 0.8rem !important;
@@ -2595,6 +2662,18 @@ button#submitBtn:hover {
     min-height: 48px !important;
   }
 
+  /* Ensure all sections cover full screen */
+  #hero-section,
+  #services-section,
+  #blog-section,
+  #contact-section {
+    width: 100vw !important;
+    max-width: 100% !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    box-sizing: border-box !important;
+  }
+
   /* Ensure all touch targets meet iOS guidelines */
   .get-started,
   .about-us-btn,
@@ -2602,92 +2681,5 @@ button#submitBtn:hover {
     min-height: 48px !important;
     font-size: 0.9rem !important;
     padding: 12px 10px !important;
-  }
-}
-/* Target iPhone 14 390px viewport specifically - ADD THIS */
-@media (min-width: 390px) and (max-width: 390px) {
-  .hero-subheading {
-    width: 88% !important;
-    margin: 0 auto !important;
-    padding: 0.6rem !important;
-  }
-
-  .hero-btns-container {
-    justify-content: space-evenly !important;
-    width: 90% !important;
-    margin: 0 auto !important;
-  }
-
-  .swiper {
-    padding: 12px 0 !important;
-  }
-
-  .card-content {
-    font-size: 0.72rem !important;
-    line-height: 0.95rem !important;
-    padding: 8px !important;
-  }
-
-  .form-heading {
-    padding: 1rem !important;
-  }
-
-  .contact-desc-head {
-    font-size: 1.2rem !important;
-    line-height: 1.5rem !important;
-  }
-
-  #hero-section,
-  #services-section,
-  #about-us,
-  #blog-section,
-  #contact-section {
-    min-height: 100vh !important;
-    padding: 0 15px !important;
-    box-sizing: border-box !important;
-  }
-
-  main {
-    margin-top: 75px !important;
-  }
-}
-@media (min-width: 456px) and (max-width: 647px) {
-  #services-section {
-    padding: 15px 0 !important;
-    justify-content: flex-start !important;
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  h2.services-included {
-    font-size: 2.2rem !important;
-    margin: 1rem 0 !important;
-    text-align: center !important;
-    width: 100% !important;
-    padding: 0 1rem !important;
-    position: relative !important;
-    z-index: 10 !important;
-    order: 1 !important; /* Ensure it appears first */
-  }
-
-  .swiper {
-    width: 95vw !important;
-    height: 320px !important;
-    margin: 1rem auto !important;
-    position: relative !important;
-    order: 2 !important; /* Ensure it appears after heading */
-  }
-
-  .swiper-slide {
-    height: 260px !important;
-  }
-
-  .card-heading {
-    font-size: 1.1rem !important;
-  }
-
-  .card-content {
-    font-size: 0.8rem !important;
-    line-height: 1.1rem !important;
   }
 }
