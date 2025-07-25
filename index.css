@@ -929,7 +929,7 @@ h2.services-included {
     display: block;
   }
 }
-@media (min-width: 320px) and (max-width: 739px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .content-card {
     width: 100%;
     height: 100%;
@@ -1681,19 +1681,15 @@ button#submitBtn:hover {
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Media Queries for tablets and small screens */
-@media (min-width: 740px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .about-us1-bg {
-    top: -20% !important;
-  }
-
-  .about-us1-bg {
-    top: -10% !important;
+    top: -15% !important;
     left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+    transform: translateX(-50%) !important;
     position: absolute !important;
   }
 }
-@media (min-width: 740px) and (max-width: 999px) {
+@media (min-width: 768px) and (max-width: 999px) {
   #hero-section,
   #services-section,
   #about-us,
@@ -2141,5 +2137,114 @@ button#submitBtn:hover {
     border-radius: 1rem;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
     position: relative;
+  }
+}
+/* Small phones - ADD THIS */
+@media (max-width: 374px) {
+  .company-title {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+  }
+  .hero-heading {
+    font-size: 1.2rem !important;
+    line-height: 1.6rem !important;
+  }
+  .hero-subheading {
+    font-size: 0.8rem !important;
+    line-height: 1rem !important;
+  }
+}
+
+/* Medium phones - ADD THIS */
+@media (min-width: 375px) and (max-width: 413px) {
+  .hero-heading {
+    font-size: 1.4rem !important;
+    line-height: 1.8rem !important;
+  }
+}
+
+/* Large phones - ADD THIS */
+@media (min-width: 414px) and (max-width: 639px) {
+  .hero-heading {
+    font-size: 1.6rem !important;
+    line-height: 2rem !important;
+  }
+  .hero-subheading {
+    font-size: 0.95rem !important;
+    line-height: 1.2rem !important;
+  }
+}
+
+/* Small tablets - ADD THIS */
+@media (min-width: 640px) and (max-width: 767px) {
+  .hero-heading {
+    font-size: 2rem !important;
+    line-height: 2.4rem !important;
+  }
+  .hero-wrapper-2 {
+    display: flex !important;
+    width: 40% !important;
+  }
+  .hero-wrapper-1 {
+    width: 60% !important;
+  }
+}
+
+/* Large screens - ADD THIS */
+@media (min-width: 1431px) {
+  .company-title {
+    font-size: 7rem;
+    line-height: 8rem;
+  }
+  .hero-heading {
+    font-size: 3.2rem;
+    line-height: 4.5rem;
+  }
+  .hero-subheading {
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+  }
+  h2.services-included {
+    font-size: 4.5rem;
+  }
+  h2.contact-us {
+    font-size: 4.5rem;
+  }
+}
+/* Landscape phones and small tablets - ADD THIS */
+@media (max-width: 926px) and (orientation: landscape) {
+  #hero-section,
+  #services-section,
+  #about-us,
+  #blog-section {
+    height: 100vh !important;
+    min-height: 100vh !important;
+  }
+
+  .hero-heading {
+    font-size: 1.8rem !important;
+    line-height: 2.2rem !important;
+  }
+
+  .about-us1,
+  .about-us2 {
+    height: 50vh !important;
+  }
+}
+/* Universal mobile safety - ADD THIS */
+@media (max-width: 767px) {
+  section {
+    width: 100vw !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  .quote-btn,
+  .contact-btn,
+  .get-started,
+  .about-us-btn,
+  .whatsapp-btn {
+    min-height: 44px !important;
+    padding: 8px 12px !important;
   }
 }
