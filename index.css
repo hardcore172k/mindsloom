@@ -948,6 +948,26 @@ h2.services-included {
     line-height: 1rem;
     padding: 0.5px;
   }
+  .get-started-btn {
+    position: absolute !important;
+    top: 80% !important;
+    left: 50% !important; /* Center horizontally */
+    transform: translateX(-50%) !important; /* Perfect centering */
+    margin-block-start: 0.25rem !important;
+    margin-block-end: 0.25rem !important;
+    z-index: 10 !important;
+    width: auto !important; /* Let button determine its own width */
+  }
+
+  .get-started {
+    font-size: 0.75rem !important;
+    width: 100px !important; /* Fixed width instead of percentage */
+    line-height: 1.2rem !important;
+    height: 1.5rem !important;
+    text-align: center !important;
+    padding: 2px 8px !important;
+    box-sizing: border-box !important;
+  }
 }
 
 /* --------------------------------------------------------------------------------------------------------------*/
@@ -1985,14 +2005,14 @@ button#submitBtn:hover {
   .top-card-img {
     opacity: 0.3;
   }
-  .get-started-btn {
+  /* .get-started-btn {
     position: absolute;
     top: 80%;
     left: 35%;
     margin-block-start: 0.25rem;
     margin-block-end: 0.25rem;
     z-index: 10;
-  }
+  } */
   .get-started {
     font-size: 0.75rem;
     width: 120%;
@@ -2454,10 +2474,13 @@ button#submitBtn:hover {
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
+  .get-started {
+    min-height: 34px !important;
+    padding: 8px 12px !important;
+  }
 
   .quote-btn,
   .contact-btn,
-  .get-started,
   .about-us-btn,
   .whatsapp-btn {
     min-height: 44px !important;
