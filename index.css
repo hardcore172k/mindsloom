@@ -725,7 +725,7 @@ nav li {
   height: 100%;
   overflow: hidden;
   background: linear-gradient(120deg, #d9cbb2 0%, #c7b491 50%, #f4eee0 100%);
-  z-index: 3;
+  z-index: 1;
   box-shadow: 3px -6px 9px rgba(0, 0, 0, 0.25),
     /* Top shadow */ 3px 6px 9px rgba(0, 0, 0, 0.25);
   /* Bottom shadow */
@@ -1023,7 +1023,7 @@ h2.about-us-heading {
 .about-us1-bg {
   z-index: -1;
   position: absolute;
-  top: -60%;
+  top: -180%;
 }
 
 .about-us1-img {
@@ -1701,15 +1701,8 @@ button#submitBtn:hover {
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Media Queries for tablets and small screens */
+
 @media (min-width: 768px) and (max-width: 1024px) {
-  .about-us1-bg {
-    top: -15% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    position: absolute !important;
-  }
-}
-@media (min-width: 768px) and (max-width: 999px) {
   #hero-section,
   #services-section,
   #about-us,
@@ -1717,6 +1710,20 @@ button#submitBtn:hover {
   #contact-section {
     height: 75vh;
     min-height: 70vh;
+  }
+  .about-us1-bg {
+    top: -150% !important;
+    left: 35% !important;
+    transform: translateX(-50%) !important;
+    position: absolute !important;
+  }
+  .about-us1-img {
+    width: 140%;
+    height: 120%;
+    opacity: 0.65;
+  }
+  .founder-container {
+    align-self: start;
   }
 
   .company-title {
@@ -1840,6 +1847,7 @@ button#submitBtn:hover {
     font-size: 1rem;
     line-height: 1.3rem;
   }
+
   .whatsapp-btn {
     width: 45%;
     font-size: 1rem;
@@ -2019,6 +2027,9 @@ button#submitBtn:hover {
     line-height: 1.2rem;
     height: 1.25rem;
   }
+  .founder-container {
+    align-self: flex-start;
+  }
 
   #about-us {
     flex-direction: column;
@@ -2085,7 +2096,11 @@ button#submitBtn:hover {
     font-size: 2.75rem;
   }
   .about-us1-bg {
-    top: -11%;
+    top: -115%;
+    left: 14%;
+  }
+  .about-us1-img {
+    width: 80%;
   }
 
   .contact-container {
@@ -2527,144 +2542,24 @@ button#submitBtn:hover {
     line-height: 1.1rem !important;
   }
 }
-/* iPhone 14 & iPhone 12 Pro Combined Optimizations */
+/* iPhone-12 / iPhone-14  (390 × 844, DPR 3) –– ONE  unified block  */
 @media only screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
-  /* Header improvements */
+  /* 1 – header --------------------------------------------------- */
   header {
     padding: 15px 25px !important;
     height: 65px !important;
     background: rgba(132, 145, 122, 0.95) !important;
     backdrop-filter: blur(15px) !important;
     width: 100% !important;
-    max-width: 100% !important;
     box-sizing: border-box !important;
   }
 
-  /* Main content adjustments */
-  main {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    margin-top: 75px !important;
-  }
-
-  /* Hero section improvements */
-  .hero-wrapper-1 {
-    padding-top: 85px !important;
-    width: 92% !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-heading {
-    font-size: 1.45rem !important;
-    line-height: 1.9rem !important;
-    text-align: center !important;
-    padding: 0.5rem !important;
-  }
-
-  .hero-subheading {
-    font-size: 0.95rem !important;
-    line-height: 1.25rem !important;
-    width: 85% !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-  }
-
-  .hero-btns-container {
-    justify-content: center !important;
-    gap: 15px !important;
-    width: 100% !important;
-    padding: 1rem 0 !important;
-  }
-
-  .quote-btn-container,
-  .contact-btn-container {
-    width: 8.5rem !important;
-    height: 2.2rem !important;
-  }
-
-  .quote-btn,
-  .contact-btn {
-    font-size: 0.85rem !important;
-    min-height: 48px !important;
-    padding: 12px 8px !important;
-  }
-
-  /* Services section improvements */
-  h2.services-included {
-    font-size: 1.9rem !important;
-    margin: 1.5rem 0 !important;
-    padding: 0 1rem !important;
-  }
-
-  .swiper {
-    width: 100vw !important;
-    height: 320px !important;
-    padding: 15px 0 !important;
-  }
-
-  .swiper-slide {
-    height: 240px !important;
-    margin: 0 5px !important;
-  }
-
-  /* About Us Section - Combined fixes */
-  #about-us {
-    width: 100vw !important;
-    max-width: 100% !important;
-    overflow-x: hidden !important;
-    min-height: 100vh !important;
-    box-sizing: border-box !important;
-  }
-
-  .about-us1,
-  .about-us2 {
-    width: 100% !important;
-    height: 50vh !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-
-  .left-topic-head {
-    font-size: 2.1rem !important;
-    padding: 0.8rem !important;
-  }
-
-  .about-us1-bg {
-    top: -8% !important;
-    width: 75% !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-  }
-
-  .topic-content {
-    height: 13rem !important;
-    padding: 0.8rem !important;
-    font-size: 0.95rem !important;
-  }
-
-  /* Contact section improvements */
-  h2.contact-us {
-    font-size: 2.3rem !important;
-    padding: 0 1rem !important;
-  }
-
-  .form-container {
-    width: 95% !important;
-    padding: 20px !important;
-    margin: 1rem auto !important;
-  }
-
-  .whatsapp-btn {
-    width: 55% !important;
-    font-size: 0.85rem !important;
-    padding: 12px 8px !important;
-    min-height: 48px !important;
-  }
-
-  /* Ensure all sections cover full screen */
+  html,
+  body,
+  main,
   #hero-section,
   #services-section,
+  #about-us,
   #blog-section,
   #contact-section {
     width: 100vw !important;
@@ -2673,8 +2568,107 @@ button#submitBtn:hover {
     overflow-x: hidden !important;
     box-sizing: border-box !important;
   }
+  main {
+    margin-top: 75px !important;
+  }
 
-  /* Ensure all touch targets meet iOS guidelines */
+  /* 3 – hero ------------------------------------------------------ */
+  .hero-wrapper-1 {
+    padding-top: 85px !important;
+    width: 92% !important;
+    margin: 0 auto !important;
+  }
+  .hero-heading {
+    font-size: 1.45rem !important;
+    line-height: 1.9rem !important;
+    text-align: center !important;
+    padding: 0.5rem !important;
+  }
+  .hero-subheading {
+    font-size: 0.95rem !important;
+    line-height: 1.25rem !important;
+    width: 85% !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+  }
+  .hero-btns-container {
+    justify-content: center !important;
+    gap: 15px !important;
+    width: 100% !important;
+    padding: 1rem 0 !important;
+  }
+  .quote-btn-container,
+  .contact-btn-container {
+    width: 8.5rem !important;
+    height: 2.2rem !important;
+  }
+  .quote-btn,
+  .contact-btn {
+    font-size: 0.85rem !important;
+    min-height: 48px !important;
+    padding: 12px 8px !important;
+  }
+
+  /* 4 – services -------------------------------------------------- */
+  h2.services-included {
+    font-size: 1.9rem !important;
+    margin: 1.5rem 0 !important;
+    padding: 0 1rem !important;
+    text-align: center !important;
+  }
+  .swiper {
+    width: 100vw !important;
+    height: 320px !important;
+    padding: 15px 0 !important;
+  }
+  .swiper-slide {
+    height: 240px !important;
+    margin: 0 5px !important;
+  }
+
+  /* 5 – about-us -------------------------------------------------- */
+  #about-us {
+    flex-direction: column !important;
+  }
+  .about-us1,
+  .about-us2 {
+    width: 100% !important;
+    height: 50vh !important;
+  }
+  .left-topic-head {
+    font-size: 2.1rem !important;
+    padding: 0.8rem !important;
+  }
+  .about-us1-bg {
+    top: -8% !important;
+    width: 75% !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  .topic-content {
+    height: 13rem !important;
+    padding: 0.8rem !important;
+    font-size: 0.95rem !important;
+  }
+
+  /* 6 – contact --------------------------------------------------- */
+  h2.contact-us {
+    font-size: 2.3rem !important;
+    padding: 0 1rem !important;
+  }
+  .form-container {
+    width: 95% !important;
+    padding: 20px !important;
+    margin: 1rem auto !important;
+  }
+  .whatsapp-btn {
+    width: 55% !important;
+    font-size: 0.85rem !important;
+    padding: 12px 8px !important;
+    min-height: 48px !important;
+  }
+
+  /* 7 – universal iOS touch-target fix --------------------------- */
   .get-started,
   .about-us-btn,
   button#nextBtn {
