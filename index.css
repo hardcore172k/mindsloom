@@ -2475,8 +2475,8 @@ button#submitBtn:hover {
     overflow-x: hidden !important;
   }
   .get-started {
-    min-height: 34px !important;
-    padding: 8px 12px !important;
+    min-height: 15px !important;
+    padding: 3px 12px !important;
   }
 
   .quote-btn,
