@@ -985,7 +985,7 @@ section#about-us {
 
 .about-us1 {
   width: 50%;
-  height: 100vh;
+  height: 75vh;
   background: #3c4f3e;
   display: flex;
   justify-content: center;
@@ -1000,7 +1000,7 @@ section#about-us {
 
 .about-us2 {
   width: 50%;
-  height: 100vh;
+  height: 75vh;
   background: #c19a6b;
   display: flex;
   justify-content: center;
