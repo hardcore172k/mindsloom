@@ -985,7 +985,7 @@ section#about-us {
 
 .about-us1 {
   width: 50%;
-  height: 75vh;
+  height: 100vh;
   background: #3c4f3e;
   display: flex;
   justify-content: center;
@@ -1000,7 +1000,7 @@ section#about-us {
 
 .about-us2 {
   width: 50%;
-  height: 75vh;
+  height: 100vh;
   background: #c19a6b;
   display: flex;
   justify-content: center;
@@ -1715,7 +1715,7 @@ button#submitBtn:hover {
   #about-us,
   #blog-section,
   #contact-section {
-    height: 85vh;
+    height: 75vh;
     min-height: 70vh;
   }
 
@@ -2476,7 +2476,7 @@ button#submitBtn:hover {
   }
   .get-started {
     min-height: 15px !important;
-    padding: 3px 12px !important;
+    /* padding: 3px 12px !important; */
   }
 
   .quote-btn,
