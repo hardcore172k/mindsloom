@@ -1128,9 +1128,9 @@ h2.about-us-heading {
 }
 
 .founder-3d-rotate {
-  animation: rotate3D 6s ease-in-out infinite;
+  /* animation: rotate3D 6s ease-in-out infinite;
   transform-origin: center center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; */
 }
 
 .founder-3d-rotate:hover {
