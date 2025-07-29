@@ -1,129 +1,257 @@
-#digital_marketing_hero{
-    display: flex;      
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
-    min-height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-hr{
-    width: 100vw;
-    position: relative;
-    top: 5rem;
+body {
+  font-family: "Noto Sans", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
 }
 
-.digital_market_hero_container{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    width: 60vw;
+/* Digital Marketing Hero Section */
+#digital_marketing_hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 45vh;
+  padding-top: 2rem;
+  overflow: visible;
 }
 
-.digital_marketing_heading{
-    font-family: "Julius Sans One";
-    font-size: 5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    letter-spacing: 3px;
+.digital_market_hero_container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1rem;
+  padding-top: 2.2rem;
 }
 
-.digital_marketing_def{
-    font-size: 1.5rem;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-style: normal;
-    font-weight: 400;
-    letter-spacing: 1px;
+.hero_description_wrapper {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.digital_marketing_heading {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 5rem);
+  margin: 0.5rem 0;
+  padding: 0.5rem 0 0.2rem 0;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #111;
+  font-weight: normal;
+}
+
+.digital_marketing_def {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  margin: 0.5rem 0;
+  padding: 0.5rem 0 0.2rem 0;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Horizontal rule */
+hr {
+  width: 100%;
+  height: 0.5px;
+  background: #222;
+  border: none;
+  margin: 2.5rem 0 0 0;
 }
 
 /* Service Section */
-
-#digital_marketing_services{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    min-height: 100vh;
+#digital_marketing_services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem 0;
+  margin-top: 15px;
 }
 
+.services_wrapper {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.services_header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.digital_marketing_services_heading {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.digital_marketing_services_para {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #666;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Card Styles - FIXED RESPONSIVE LAYOUT */
 .card {
-    background: white;
-    overflow: hidden;
-    transition: height 0.3s ease-in-out;
-    height: 18rem;
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    border-bottom: 3px solid;
+  background: #fff;
+  width: 100%;
+  min-height: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.5rem;
+  border-bottom: 3px solid #222;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
 }
 
 .card.expanded {
-    height: 36rem; /* Fully expanded state */
+  min-height: 20rem;
+}
+
+/* CRITICAL FIX: Proper flexbox for card header */
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.card-num {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin: 0;
+  flex-shrink: 0;
+  color: #111;
+  font-weight: bold;
+  min-width: fit-content;
+}
+
+.card-heading {
+  font-family: "Julius Sans One", sans-serif;
+  font-size: clamp(1.25rem, 3vw, 2.2rem);
+  color: #111;
+  font-weight: 500;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+}
+
+/* CRITICAL FIX: Toggle button positioning */
+.toggle-btn {
+  background: none;
+  border: none;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  cursor: pointer;
+  line-height: 1;
+  color: #111;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+  margin-left: auto;
+}
+
+.toggle-btn:hover {
+  color: #666;
 }
 
 .card-content {
-    padding: 10px 0;
-    color: #333;
-    width: 50%;
-    position: relative;
-    left: 45%;
-    bottom: 25%;
+  width: 100%;
+  margin-top: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
+/* Hide content by default */
 .card-content-para {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.3s ease, max-height 0.3s ease;
-    font-size: 1rem;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
+  color: #555;
 }
 
+/* Show content when expanded */
 .card.expanded .card-content-para {
-    opacity: 1;
-    max-height: fit-content; /* Adjust based on content */
-
+  opacity: 1;
+  max-height: 1000px;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-.card.expanded .card-content{
-    bottom: 30%;
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1px solid #eee;
+  color: #666;
 }
 
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  #digital_marketing_hero {
+    min-height: 32vh;
+    padding-top: 1rem;
+  }
 
-.card-num{
-    font-size: 28rem;
-    position: relative;
-    top: 25%;
+  .digital_marketing_heading {
+    letter-spacing: 1px;
+  }
 
+  .card {
+    padding: 1rem;
+  }
+
+  .card-header {
+    gap: 0.75rem;
+  }
+
+  .toggle-btn {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  hr {
+    margin-top: 1rem;
+  }
 }
 
-.card-heading{
-    font-size: 2.5rem;
-    position: relative;
-    top: 20%;
-}
+@media (max-width: 500px) {
+  .card {
+    padding: 0.75rem;
+  }
 
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: "Julias Sans One";
-}
+  .card-header {
+    gap: 0.5rem;
+  }
 
-.toggle-btn {
-    background: none;
-    border: none;
-    font-size: 2.5rem;
-    cursor: pointer;
+  .toggle-btn {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 1.25rem;
+  }
 }

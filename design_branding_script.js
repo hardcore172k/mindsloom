@@ -1,41 +1,75 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const cards = document.querySelectorAll(".card");
-    
-    cards.forEach((card) => {
-        const button = card.querySelector(".toggle-btn");
-        const cardNum = card.querySelector(".card-num");
-        const cardHeading = card.querySelector(".card-heading");
-        const cardContent = card.querySelector(".card-content-para");
+  // Get all toggle buttons
+  const toggleButtons = document.querySelectorAll(".toggle-btn");
 
-        button.addEventListener("click", function () {
-            // Close any already expanded card
-            cards.forEach((c) => {
-                if (c !== card) {
-                    c.classList.remove("expanded");
-                    c.querySelector(".toggle-btn").textContent = "+";
+  // Add click event listener to each toggle button
+  toggleButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Get the parent card
+      const card = this.closest(".card");
 
-                    // Reset position of card-num and card-heading
-                    c.querySelector(".card-num").style.top = "";
-                    c.querySelector(".card-heading").style.top = "";
-                    c.querySelector(".card-num").style.fontSize = "";
+      // Toggle the expanded class
+      card.classList.toggle("expanded");
+
+      // Update button text
+      if (card.classList.contains("expanded")) {
+        this.textContent = "−";
+        this.setAttribute("aria-label", "Collapse content");
+      } else {
+        this.textContent = "+";
+        this.setAttribute("aria-label", "Expand content");
+      }
+    });
+  });
+
+  // Optional: Close other cards when one is opened (accordion behavior)
+  // Uncomment the code below if you want accordion behavior
+  /*
+    toggleButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const currentCard = this.closest('.card');
+            const allCards = document.querySelectorAll('.card');
+            
+            // Close all other cards
+            allCards.forEach(function(card) {
+                if (card !== currentCard && card.classList.contains('expanded')) {
+                    card.classList.remove('expanded');
+                    const otherButton = card.querySelector('.toggle-btn');
+                    otherButton.textContent = '+';
+                    otherButton.setAttribute('aria-label', 'Expand content');
                 }
             });
-
-            // Toggle the clicked card
-            const isExpanded = card.classList.contains("expanded");
-            card.classList.toggle("expanded", !isExpanded);
-            button.textContent = isExpanded ? "+" : "−"; 
-
-            // Adjust card-num and card-heading position when expanded
-            if (!isExpanded) {
-                cardNum.style.top = "30%";
-                cardNum.style.fontSize = "18rem";
-                cardHeading.style.top = "-15%";
+            
+            // Toggle current card
+            currentCard.classList.toggle('expanded');
+            
+            // Update button text
+            if (currentCard.classList.contains('expanded')) {
+                this.textContent = '−';
+                this.setAttribute('aria-label', 'Collapse content');
             } else {
-                cardNum.style.top = "";  // Reset
-                cardHeading.style.top= "";  // Reset
-                cardNum.style.fontSize = ""; //Reset
+                this.textContent = '+';
+                this.setAttribute('aria-label', 'Expand content');
             }
         });
     });
+    */
+});
+
+// Optional: Smooth scrolling for better UX
+function smoothScrollToCard(cardElement) {
+  cardElement.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+}
+
+// Optional: Keyboard accessibility
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Enter" || e.key === " ") {
+    if (e.target.classList.contains("toggle-btn")) {
+      e.preventDefault();
+      e.target.click();
+    }
+  }
 });
