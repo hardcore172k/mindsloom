@@ -181,6 +181,7 @@ hr {
   margin-top: 1rem;
   position: relative;
   z-index: 1;
+  line-height: 5px;
 }
 
 /* Hide content by default */
@@ -190,7 +191,7 @@ hr {
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
   font-size: clamp(0.9rem, 2vw, 1rem);
-  line-height: 1.6;
+  line-height: 1.95;
   color: #555;
 }
 
