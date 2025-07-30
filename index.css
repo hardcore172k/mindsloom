@@ -897,7 +897,7 @@ h2.services-included {
 
   /* Force main sections to have lower z-index in mobile */
   #services-section {
-    z-index: 1 !important;
+    z-index: 0 !important;
   }
 
   #hero-section {
@@ -1023,7 +1023,7 @@ h2.about-us-heading {
 .about-us1-bg {
   z-index: -1;
   position: absolute;
-  top: -180%;
+  top: -130%;
 }
 
 .about-us1-img {
@@ -1075,7 +1075,7 @@ h2.about-us-heading {
 
 #story-content {
   font-size: 1.25rem;
-  line-height: 1.5rem;
+  line-height: 2rem;
   width: 85%;
   height: 80%;
   padding: 10px;
@@ -1381,7 +1381,7 @@ form.contact-form {
 
 label {
   font-family: "Jua", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.5px;
   display: block;
@@ -1398,11 +1398,11 @@ textarea {
   border: none;
   height: 2.2rem;
   padding: 0.5rem;
-  margin: 0 2.5%;
+  margin: 0 0.5%;
   width: 75%;
   background-color: rgba(400, 400, 400, 0.75);
   border-radius: 1rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-family: "Jua", sans-serif;
 }
 
@@ -1427,7 +1427,7 @@ textarea {
 .contact-type label {
   display: inline-block;
   margin-right: 1rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 button#nextBtn,
@@ -1603,15 +1603,15 @@ button#submitBtn:hover {
     line-height: 1.5rem;
   }
   #founder-content {
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 2rem;
   }
 
   #story-content,
   #mission-content {
     max-height: 28rem;
-    font-size: 1.075rem;
-    line-height: 1.4rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
     overflow-y: auto;
     overflow-x: hidden;
     overflow-anchor: none;
@@ -1712,7 +1712,7 @@ button#submitBtn:hover {
     min-height: 70vh;
   }
   .about-us1-bg {
-    top: -150% !important;
+    top: -130% !important;
     left: 35% !important;
     transform: translateX(-50%) !important;
     position: absolute !important;
@@ -1815,7 +1815,7 @@ button#submitBtn:hover {
   }
   #founder-content {
     font-size: 1rem;
-    line-height: 1.35rem;
+    line-height: 1.55rem;
   }
   #story-content {
     font-size: 1rem;
@@ -2071,12 +2071,12 @@ button#submitBtn:hover {
   }
   #founder-content {
     font-size: 1rem;
-    line-height: 1.35rem;
+    line-height: 1.5rem;
   }
   #story-content,
   #mission-content {
     font-size: 1rem;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
     margin: 0;
     padding: 1rem;
   }
@@ -2096,7 +2096,7 @@ button#submitBtn:hover {
     font-size: 2.75rem;
   }
   .about-us1-bg {
-    top: -115%;
+    top: -88%;
     left: 14%;
   }
   .about-us1-img {
@@ -2353,8 +2353,8 @@ button#submitBtn:hover {
   #mission-content,
   #founder-content {
     font-size: 0.85rem !important;
-    line-height: 1.1rem !important;
-    height: 250px !important;
+    line-height: 1.4rem !important;
+    height: 310px !important;
     overflow-y: auto !important;
     padding: 5px !important;
   }
@@ -2675,5 +2675,92 @@ button#submitBtn:hover {
     min-height: 48px !important;
     font-size: 0.9rem !important;
     padding: 12px 10px !important;
+  }
+}
+
+/* Mobile and Tablet Quote Modal Fixes */
+@media (max-width: 1024px) {
+  .wrapper-quote {
+    z-index: 100000 !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+
+  .quote-content {
+    width: 95%;
+    max-width: none;
+    margin: 20px auto;
+    padding: 1.5rem;
+    max-height: 85vh;
+    overflow-y: auto;
+    z-index: 100001 !important;
+  }
+
+  .quote-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  #quote-form {
+    width: 100%;
+  }
+
+  #quote-form input,
+  #quote-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 768px) {
+  .quote-content {
+    width: 95%;
+    padding: 1rem;
+    margin: 10px;
+    margin-top: 3.5rem;
+    max-height: 80vh;
+  }
+  .wrapper-quote {
+    z-index: 99 !important;
+    position: fixed !important;
+  }
+
+  .quote-heading {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  #quote-form input,
+  #quote-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  #quote-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .close-btn {
+    top: 5px;
+    right: 10px;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quote-content {
+    width: 98%;
+    padding: 0.8rem;
+    margin: 5px;
+    max-height: 75vh;
+  }
+
+  .quote-heading {
+    font-size: 1.8rem;
+  }
+
+  .response-time {
+    font-size: 1rem;
   }
 }

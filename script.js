@@ -85,34 +85,68 @@ document.addEventListener("DOMContentLoaded", () => {
     form.reset();
   }
 
-  openBtn.addEventListener("click", () => {
+  // Function to show modal with scroll lock
+  function showQuoteModal() {
     modal.style.display = "flex";
-  });
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+    document.body.style.position = "fixed"; // Additional mobile fix
+    document.body.style.width = "100%"; // Prevent layout shift
+  }
 
-  closeBtn.addEventListener("click", () => {
+  // Function to hide modal and restore scroll
+  function hideQuoteModal() {
     modal.style.display = "none";
+    document.body.style.overflow = "auto"; // Restore scrolling
+    document.body.style.position = "static"; // Restore position
+    document.body.style.width = "auto"; // Restore width
     resetForm();
+  }
+
+  // Open modal
+  openBtn.addEventListener("click", () => {
+    showQuoteModal();
   });
 
+  // Close modal via close button
+  closeBtn.addEventListener("click", () => {
+    hideQuoteModal();
+  });
+
+  // Close modal when clicking outside
   window.addEventListener("click", (e) => {
     if (e.target === modal) {
-      modal.style.display = "none";
-      resetForm();
+      hideQuoteModal();
     }
   });
 
+  // Handle form submission
   form.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    if (parseInt(captchaInput.value) !== 10) {
+    if (parseInt(captchaInput.value) !== 12) {
+      // 7 + 5 = 12, not 10
       alert("Captcha is incorrect. Please try again.");
       return;
     }
 
     alert("Quote request submitted successfully!");
-    modal.style.display = "none";
-    resetForm();
+    hideQuoteModal();
   });
+
+  // Add escape key support to close modal
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.style.display === "flex") {
+      hideQuoteModal();
+    }
+  });
+
+  // Prevent modal content clicks from closing the modal
+  const quoteContent = document.querySelector(".quote-content");
+  if (quoteContent) {
+    quoteContent.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  }
 });
 
 //***********************************************************************************************************************/
