@@ -1521,19 +1521,18 @@ button#submitBtn:hover {
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Logos Flow Section */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
 .logo-scroll {
-  width: 200%;
+  animation: scroll 30s linear infinite;
 }
 
-.animate-scroll {
-  animation: scroll 20s linear infinite;
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
 
 /* --------------------------------------------------------------------------------------------------------------*/
 
