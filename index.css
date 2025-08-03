@@ -33,6 +33,15 @@ main {
   font-family: "jua";
 }
 
+footer {
+  background-color: #23423f;
+  font-size: 1.25rem;
+  color: darkgray;
+  text-align: center;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
 /* -------------------------------------------------------------------------------------------------------------*/
 
 /* Intro Loader */
@@ -839,7 +848,7 @@ h2.services-included {
   height: 40%;
   position: absolute;
   z-index: 10;
-  top: 22%;
+  top: 14%;
   left: 10%;
   width: 50%;
 }
@@ -1521,6 +1530,10 @@ button#submitBtn:hover {
 /* --------------------------------------------------------------------------------------------------------------*/
 
 /* Logos Flow Section */
+
+#logo-flow-section {
+  background-color: #dac9a0;
+}
 .logo-scroll {
   animation: scroll 30s linear infinite;
 }

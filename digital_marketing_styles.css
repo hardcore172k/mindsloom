@@ -8,7 +8,7 @@ body {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.6;
   color: #333;
-  background: #fff;
+  background: linear-gradient(120deg, #d9cbb2 0%, #c7b491 50%, #f4eee0 100%);
 }
 
 /* Digital Marketing Hero Section */
@@ -55,7 +55,7 @@ body {
   font-weight: 400;
   letter-spacing: 1px;
   text-align: center;
-  color: #666;
+  color: darkslategray;
   line-height: 1.6;
 }
 
@@ -99,14 +99,20 @@ hr {
 
 .digital_marketing_services_para {
   font-size: clamp(1rem, 2vw, 1.25rem);
-  color: #666;
+  color: darkslategray;
   max-width: 48rem;
   margin: 0 auto;
 }
 
 /* Card Styles - FIXED RESPONSIVE LAYOUT */
 .card {
-  background: #fff;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
   min-height: 11rem;
   display: flex;
@@ -190,9 +196,9 @@ hr {
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.3s ease, max-height 0.3s ease;
-  font-size: clamp(0.9rem, 2vw, 1rem);
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
   line-height: 1.95;
-  color: #555;
+  color: darkslategrey;
 }
 
 /* Show content when expanded */
@@ -202,15 +208,6 @@ hr {
   transition: opacity 0.4s ease, max-height 0.4s ease;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1.5rem 0;
-  width: 100%;
-  background: #fff;
-  border-top: 1px solid #eee;
-  color: #666;
-}
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {
