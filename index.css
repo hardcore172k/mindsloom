@@ -1549,13 +1549,13 @@ button#submitBtn:hover {
   }
 }
 
-.logo-scroll {
+/* .logo-scroll {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
   animation: scroll 25s linear infinite;
   width: max-content;
-}
+} */
 
 .logo-scroll > div {
   flex-shrink: 0;
@@ -1859,7 +1859,7 @@ button#submitBtn:hover {
     padding-top: 1.5%;
   }
   .hero-heading {
-    font-size: 1.67rem;
+    font-size: 2.1rem;
     line-height: 3rem;
     padding: 0.7%;
   }
@@ -2285,7 +2285,7 @@ button#submitBtn:hover {
     line-height: 3rem !important;
   }
   .hero-heading {
-    font-size: 1rem !important;
+    font-size: 1.25rem !important;
     line-height: 1.6rem !important;
   }
   .hero-subheading {
