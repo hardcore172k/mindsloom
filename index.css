@@ -2817,6 +2817,9 @@ button#submitBtn:hover {
 }
 
 @media (max-width: 768px) {
+  #work-sec{
+    max-width: 100vw;
+  }
   .quote-content {
     width: 95%;
     padding: 1rem;
@@ -2849,6 +2852,10 @@ button#submitBtn:hover {
     top: 5px;
     right: 10px;
     font-size: 30px;
+  }
+
+  footer{
+    font-size: 1rem;
   }
 }
 

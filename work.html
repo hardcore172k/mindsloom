@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Work - MindsLoom Style</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./index.css" />
-
+    <script src="script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+    <link rel="stylesheet" href="./index.css" />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Jua&display=swap");
 
@@ -92,8 +94,7 @@
     </style>
   </head>
   <body class="main-gradient min-h-screen">
-    <!-- Header -->
-
+    <!-- Include the same navbar from index.html -->
     <header>
       <div class="left_container">
         <a href="index.html" class="left_elements">Home</a>
@@ -141,7 +142,7 @@
         <ul>
           <li><a href="#about-us">About Us</a></li>
           <li><a href="#services-section">Services</a></li>
-          <li><a href="ailoom.html">AI Loom</a></li>
+          <li><a href="work.html">Our Work</a></li>
           <li><a href="#blog-button">Blogs</a></li>
           <li><a href="#contact-section">Contact Us</a></li>
         </ul>
@@ -178,7 +179,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="#about-us">About Us</a></li>
             <li><a href="#services-section">Services</a></li>
-            <li><a href="ailoom.html">AI Loom</a></li>
+            <li><a href="work.html">Our Work</a></li>
             <li><a href="#blog-button">Blogs</a></li>
             <li><a href="#contact-section">Contact Us</a></li>
           </ul>
@@ -207,7 +208,7 @@
       </div>
     </header>
     <!-- Work Section -->
-    <section class="mt-6 py-20 px-4 sm:px-6 lg:px-8">
+    <section class="py-20 px-4 sm:px-6 lg:px-8 pt-28" id="work-sec">
       <div class="max-w-7xl mx-auto">
         <!-- Header -->
         <div class="text-center mb-16">
@@ -460,7 +461,6 @@
             </div>
           </div>
         </div>
-      </div>
     </section>
     <!--Contact Us Section-->
 
@@ -713,6 +713,8 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
     <footer>
       <p>&copy; 2025 MindsLoom. All rights reserved.</p>
     </footer>
@@ -751,8 +753,5 @@
         }
       })();
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
-    <script src="script.js" defer></script>
   </body>
 </html>
