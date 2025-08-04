@@ -18,8 +18,8 @@ body {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  min-height: 45vh;
-  padding-top: 2rem;
+  min-height: 35vh;
+  padding-top: 3.5rem;
   overflow: visible;
 }
 
@@ -207,7 +207,6 @@ hr {
   max-height: 1000px;
   transition: opacity 0.4s ease, max-height 0.4s ease;
 }
-
 
 /* Responsive Media Queries */
 @media (max-width: 768px) {

@@ -367,6 +367,11 @@ nav li {
   width: 24px;
   height: 24px;
 }
+@media (min-width: 1430px) {
+  .founder-container {
+    justify-self: start;
+  }
+}
 
 /* Mobile responsive styles */
 @media (max-width: 768px) {
@@ -1032,7 +1037,7 @@ h2.about-us-heading {
 .about-us1-bg {
   z-index: -1;
   position: absolute;
-  top: -130%;
+  top: -140%;
 }
 
 .about-us1-img {
@@ -1534,16 +1539,79 @@ button#submitBtn:hover {
 #logo-flow-section {
   background-color: #dac9a0;
 }
-.logo-scroll {
-  animation: scroll 30s linear infinite;
-}
-
+/* Keyframe animation for logo scroll */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+.logo-scroll {
+  display: flex;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  animation: scroll 25s linear infinite;
+  width: max-content;
+}
+
+.logo-scroll > div {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.overflow-hidden {
+  overflow-x: hidden !important;
+  width: 100% !important;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .logo-scroll {
+    animation-duration: 22s !important;
+  }
+
+  /* Make logos slightly smaller on mobile if needed */
+  .logo-scroll .min-w-\[120px\] {
+    min-width: 100px;
+    padding: 1rem;
+  }
+
+  .logo-scroll span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-scroll {
+    animation-duration: 22s !important;
+  }
+
+  .logo-scroll .min-w-\[120px\] {
+    min-width: 90px;
+    padding: 0.75rem;
+  }
+
+  .logo-scroll span {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .logo-scroll {
+    animation-duration: 18s !important;
+  }
+
+  .logo-scroll .min-w-\[120px\] {
+    min-width: 80px;
+    padding: 0.5rem;
+  }
+
+  .logo-scroll span {
+    font-size: 0.8rem;
   }
 }
 
@@ -1733,16 +1801,20 @@ button#submitBtn:hover {
 
 @media (min-width: 768px) and (max-width: 1024px) {
   #hero-section,
-  #services-section,
   #about-us,
   #blog-section,
   #contact-section {
     height: 75vh;
     min-height: 70vh;
   }
+
+  #services-section {
+    height: 100vh;
+    min-height: 100vh;
+  }
   .about-us1-bg {
-    top: -130% !important;
-    left: 35% !important;
+    top: -90% !important;
+    left: 44% !important;
     transform: translateX(-50%) !important;
     position: absolute !important;
   }
@@ -1787,7 +1859,7 @@ button#submitBtn:hover {
     padding-top: 1.5%;
   }
   .hero-heading {
-    font-size: 2.25rem;
+    font-size: 1.67rem;
     line-height: 3rem;
     padding: 0.7%;
   }
@@ -1897,6 +1969,9 @@ button#submitBtn:hover {
     width: 5rem;
     height: 1.75rem;
     font-size: 1rem;
+  }
+  footer {
+    font-size: 1.6rem;
   }
 }
 
@@ -2210,7 +2285,7 @@ button#submitBtn:hover {
     line-height: 3rem !important;
   }
   .hero-heading {
-    font-size: 1.2rem !important;
+    font-size: 1rem !important;
     line-height: 1.6rem !important;
   }
   .hero-subheading {
@@ -2230,7 +2305,7 @@ button#submitBtn:hover {
 /* Large phones - ADD THIS */
 @media (min-width: 414px) and (max-width: 639px) {
   .hero-heading {
-    font-size: 1.6rem !important;
+    font-size: 1.4rem !important;
     line-height: 2rem !important;
   }
   .hero-subheading {
@@ -2791,5 +2866,8 @@ button#submitBtn:hover {
 
   .response-time {
     font-size: 1rem;
+  }
+  footer {
+    font-size: 0.95rem;
   }
 }
