@@ -279,74 +279,130 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Contact Form Modal
 
+// Include EmailJS SDK in your HTML
+// <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("Script loaded successfully"); // Confirm script runs
+  console.log("Script loaded successfully");
 
-  // Select DOM elements
+  emailjs.init("YOUR_PUBLIC_KEY");
+
   const nextBtn = document.getElementById("nextBtn");
+  const submitBtn = document.getElementById("submitBtn");
   const formModal = document.getElementById("formModal");
+  const closeModal = document.getElementById("closeModal");
   const form1 = document.getElementById("contactFormStep1");
+  const form2 = document.getElementById("contactFormStep2");
+  const successMessage = document.getElementById("successMessage");
 
-  // Log existence of elements
-  console.log("nextBtn:", nextBtn);
-  console.log("formModal:", formModal);
-  console.log("form1:", form1);
-  console.log("Document body:", document.body.innerHTML.slice(0, 200)); // Log first 200 chars of HTML for debug
-
-  // Check if critical elements exist
-  if (!nextBtn) {
-    console.error("Error: nextBtn element not found. Check ID in HTML.");
-    return;
-  }
-  if (!formModal) {
-    console.error("Error: formModal element not found. Check ID in HTML.");
-    return;
-  }
-
-  // Proceed even if form1 is missing for testing
-  if (!form1) {
-    console.warn(
-      "Warning: contactFormStep1 element not found. Modal will open without validation."
-    );
-  }
-
-  // Handle "Next" button click
   nextBtn.addEventListener("click", function (e) {
     e.preventDefault();
-    console.log("Next button clicked");
 
-    // Log current modal display state
-    console.log("Current formModal display:", formModal.style.display);
+    if (form1 && !form1.checkValidity()) {
+      form1.reportValidity();
+      return;
+    }
 
-    // Attempt to show modal
     formModal.style.display = "flex";
     document.body.style.overflow = "hidden";
-    console.log(
-      "Set formModal display to flex, new display:",
-      formModal.style.display
-    );
-
-    // Apply validation if form1 exists
-    if (form1) {
-      console.log("Form 1 validity:", form1.checkValidity());
-      if (!form1.checkValidity()) {
-        console.log("Form 1 invalid. Check required fields (name, email).");
-        form1.reportValidity();
-      }
-    } else {
-      console.log("No form1 found, skipping validation.");
-    }
   });
 
-  // Handle modal close
-  const closeModal = document.getElementById("closeModal");
   if (closeModal) {
     closeModal.addEventListener("click", function () {
-      console.log("Close modal clicked");
       formModal.style.display = "none";
       document.body.style.overflow = "";
     });
-  } else {
-    console.error("Error: closeModal element not found.");
   }
+
+  submitBtn.addEventListener("click", async function (e) {
+    e.preventDefault();
+
+    if (form2 && !form2.checkValidity()) {
+      form2.reportValidity();
+      return;
+    }
+
+    // Collect all form data
+    const formData = collectFormData();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      // Send email using EmailJS
+      const result = await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone || "Not provided",
+        company: formData.company || "Not provided",
+        services: formData.services.join(", ") || "None selected",
+        budget: formData.budget,
+        timeline: formData.timeline,
+        website: formData.website || "Not provided",
+        referral: formData.referral || "Not provided",
+        contact_method: formData.contact_method || "Email",
+        message: formData.message,
+        submission_date: new Date().toLocaleString(),
+      });
+
+      console.log("Email sent successfully:", result);
+
+      successMessage.style.display = "block";
+
+      if (form1) form1.reset();
+      if (form2) form2.reset();
+
+      setTimeout(() => {
+        formModal.style.display = "none";
+        document.body.style.overflow = "";
+        successMessage.style.display = "none";
+      }, 2000);
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      // Re-enable submit button
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit";
+    }
+  });
+
+  // Function to collect all form data
+  function collectFormData() {
+    const data = {};
+
+    // Step 1 data
+    if (form1) {
+      const form1Data = new FormData(form1);
+      for (let [key, value] of form1Data.entries()) {
+        data[key] = value;
+      }
+    }
+
+    if (form2) {
+      const form2Data = new FormData(form2);
+
+      const services = [];
+      const serviceCheckboxes = form2.querySelectorAll(
+        'input[name="services"]:checked'
+      );
+      serviceCheckboxes.forEach((checkbox) => services.push(checkbox.value));
+      data.services = services;
+
+      for (let [key, value] of form2Data.entries()) {
+        if (key !== "services") {
+          data[key] = value;
+        }
+      }
+    }
+
+    return data;
+  }
+
+  formModal.addEventListener("click", function (e) {
+    if (e.target === formModal) {
+      formModal.style.display = "none";
+      document.body.style.overflow = "";
+    }
+  });
 });
