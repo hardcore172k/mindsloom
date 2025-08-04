@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="./index.css" />
     <script src="script.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
     <link rel="stylesheet" href="./index.css" />
-
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Jua&display=swap");
 
@@ -208,11 +208,7 @@
       </div>
     </header>
     <!-- Work Section -->
-<<<<<<< HEAD
     <section class="py-20 px-4 sm:px-6 lg:px-8 pt-28">
-=======
-    <section class="mt-6 py-20 px-4 sm:px-6 lg:px-8">
->>>>>>> 700e3265dea01f39a9704be824ccfb7d55689f0e
       <div class="max-w-7xl mx-auto">
         <!-- Header -->
         <div class="text-center mb-16">
@@ -564,21 +560,29 @@
       <div class="contact-container">
         <!-- Heading Section -->
         <div class="form-heading">
-          <h2 class="contact-us">
-            Contact Us
-          </h2>
+          <h2 class="contact-us">Contact Us</h2>
           <div class="we-are-at-container">
-            <p class="contact-desc-head">Have an idea, challenge, or vision you’d like to bring to life?</p>
+            <p class="contact-desc-head">
+              Have an idea, challenge, or vision you’d like to bring to life?
+            </p>
           </div>
           <div class="contact-us-at">
             <p class="contact-desc">
-              Reach out to us via the form or email us directly at business@mindsloom.com.
-              Prefer a quick chat? We're on WhatsApp too let’s connect instantly.
+              Reach out to us via the form or email us directly at
+              business@mindsloom.com. Prefer a quick chat? We're on WhatsApp too
+              let’s connect instantly.
             </p>
           </div>
           <div class="whatsapp-button">
-            <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/919792257726'">
-              <img class="whatsapp-icon" src="whatsapp.png" alt="WhatsApp Icon" />
+            <button
+              class="whatsapp-btn"
+              onclick="window.location.href='https://wa.me/919792257726'"
+            >
+              <img
+                class="whatsapp-icon"
+                src="whatsapp.png"
+                alt="WhatsApp Icon"
+              />
               WhatsApp
             </button>
           </div>
@@ -619,19 +623,33 @@
           <div class="project-type">
             <label for="services">Services Interested In *</label>
             <div class="checkbox-group">
-              <label><input type="checkbox" name="services" value="Branding"> Branding</label>
-              <label><input type="checkbox" name="services" value="Web Design"> Web Design</label>
-              <label><input type="checkbox" name="services" value="SEO"> SEO</label>
-              <label><input type="checkbox" name="services" value="Social Media"> Social Media</label>
-              <label><input type="checkbox" name="services" value="Paid Ads"> Paid Ads</label>
+              <label
+                ><input type="checkbox" name="services" value="Branding" />
+                Branding</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="Web Design" />
+                Web Design</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="SEO" />
+                SEO</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="Social Media" />
+                Social Media</label
+              >
+              <label
+                ><input type="checkbox" name="services" value="Paid Ads" /> Paid
+                Ads</label
+              >
             </div>
           </div>
           <div class="project-cost">
             <label for="budget">Budget Range *</label>
             <select id="budget" name="budget" required>
               <option value="">-- Select Budget --</option>
-              <option value="< ₹50K">
-                < ₹50K</option>
+              <option value="< ₹50K">< ₹50K</option>
               <option value="₹50K – ₹1L">₹50K – ₹1L</option>
               <option value="₹1L+">₹1L+</option>
             </select>
@@ -647,7 +665,12 @@
           </div>
           <div class="website-link">
             <label for="website">Website URL</label>
-            <input type="url" id="website" name="website" placeholder="https://example.com" />
+            <input
+              type="url"
+              id="website"
+              name="website"
+              placeholder="https://example.com"
+            />
           </div>
           <div class="referral-source">
             <label for="referral">How did you hear about us?</label>
@@ -655,78 +678,139 @@
           </div>
           <div class="contact-type">
             <label for="contact-method">Preferred Contact Method</label>
-            <label><input type="radio" name="contact_method" value="Email" checked> Email</label>
-            <label><input type="radio" name="contact_method" value="Phone"> Phone</label>
-            <label><input type="radio" name="contact_method" value="WhatsApp"> WhatsApp</label>
+            <label
+              ><input
+                type="radio"
+                name="contact_method"
+                value="Email"
+                checked
+              />
+              Email</label
+            >
+            <label
+              ><input type="radio" name="contact_method" value="Phone" />
+              Phone</label
+            >
+            <label
+              ><input type="radio" name="contact_method" value="WhatsApp" />
+              WhatsApp</label
+            >
           </div>
-          
+
           <div class="project-message">
             <label for="message">Message / Project Description *</label>
             <textarea id="message" name="message" rows="5" required></textarea>
           </div>
           <button type="button" id="submitBtn">Submit</button>
-          <div class="success-message" id="successMessage">Thanks! We'll get back to you within 10 minutes.</div>
+          <div class="success-message" id="successMessage">
+            Thanks! We'll get back to you within 10 minutes.
+          </div>
         </form>
       </div>
     </div>
 
     <!--brand logos loop Section-->
 
-   <!-- Logo Flow Section -->
-<section class="py-16 bg-white" id="logo-flow-section">
-  <div class="container mx-auto px-6">
-    <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-      <h3 class=" text-md font-bold text-gray-900 text-center mb-8 sm:text-2xl">Trusted by Industry Leaders</h3>
-      <div class="overflow-hidden relative w-full">
-        <div class="flex logo-scroll">
-          <!-- First set of logos -->
-          <div class="flex items-center flex-shrink-0" style="gap: 3rem;">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">TechCorp</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">InnovateLab</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">FutureSync</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">CloudVision</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">DataFlow</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">NextGen</span>
-            </div>
-          </div>
-          
-          <!-- Duplicate set for seamless loop -->
-          <div class="flex items-center flex-shrink-0" style="gap: 3rem; margin-left: 3rem;">
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">TechCorp</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">InnovateLab</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">FutureSync</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">CloudVision</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">DataFlow</span>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
-              <span class="text-gray-900 font-bold text-lg">NextGen</span>
+    <!-- Logo Flow Section -->
+    <section class="py-16 bg-white" id="logo-flow-section">
+      <div class="container mx-auto px-6">
+        <div
+          class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
+        >
+          <h3
+            class="text-md font-bold text-gray-900 text-center mb-8 sm:text-2xl"
+          >
+            Trusted by Industry Leaders
+          </h3>
+          <div class="overflow-hidden relative w-full">
+            <div class="flex logo-scroll">
+              <!-- First set of logos -->
+              <div class="flex items-center flex-shrink-0" style="gap: 3rem">
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">TechCorp</span>
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >InnovateLab</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >FutureSync</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >CloudVision</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">DataFlow</span>
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">NextGen</span>
+                </div>
+              </div>
+
+              <!-- Duplicate set for seamless loop -->
+              <div
+                class="flex items-center flex-shrink-0"
+                style="gap: 3rem; margin-left: 3rem"
+              >
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">TechCorp</span>
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >InnovateLab</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >FutureSync</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg"
+                    >CloudVision</span
+                  >
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">DataFlow</span>
+                </div>
+                <div
+                  class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-gray-900 font-bold text-lg">NextGen</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -767,11 +851,5 @@
         }
       })();
     </script>
-<<<<<<< HEAD
-=======
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
-    <script src="script.js" defer></script>
->>>>>>> 700e3265dea01f39a9704be824ccfb7d55689f0e
   </body>
 </html>
