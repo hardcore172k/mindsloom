@@ -1549,13 +1549,13 @@ button#submitBtn:hover {
   }
 }
 
-/* .logo-scroll {
+.logo-scroll {
   display: flex;
   flex-wrap: nowrap;
   white-space: nowrap;
   animation: scroll 25s linear infinite;
   width: max-content;
-} */
+}
 
 .logo-scroll > div {
   flex-shrink: 0;
@@ -2817,7 +2817,7 @@ button#submitBtn:hover {
 }
 
 @media (max-width: 768px) {
-  #work-sec{
+  #work-sec {
     max-width: 100vw;
   }
   .quote-content {
@@ -2854,7 +2854,7 @@ button#submitBtn:hover {
     font-size: 30px;
   }
 
-  footer{
+  footer {
     font-size: 1rem;
   }
 }
