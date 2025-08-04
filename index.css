@@ -1538,6 +1538,7 @@ button#submitBtn:hover {
 
 #logo-flow-section {
   background-color: #dac9a0;
+  min-height: fit-content;
 }
 /* Keyframe animation for logo scroll */
 @keyframes scroll {
