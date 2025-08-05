@@ -1,521 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" />
-    <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;500;600;700;800&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jua&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./digital_marketing_styles.css" />
-    <link rel="stylesheet" href="index.css" />
-  </head>
 
-  <body>
-    <!-- Include the same navbar from index.html -->
-    <header>
-      <div class="left_container">
-        <a href="index.html" class="left_elements">Home</a>
-        <a
-          href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
-          class="left_elements"
-          target="_blank"
-        >
-          <img src="fb icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a
-          href="https://www.instagram.com/mindsloom2024"
-          class="left_elements"
-          target="_blank"
-        >
-          <img src="insta icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/mindsloom/"
-          class="left_elements"
-          target="_blank"
-        >
-          <img src="linkedin icon.svg" alt="Icon" width="20" height="20" />
-        </a>
-        <a href="https://x.com/mindsloom" class="left_elements" target="_blank">
-          <img src="twitter icon.svg" alt="Icon" width="20" height="20" />
-        </a>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="initial-scale=1, width=device-width" />
+  <link rel="icon" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" href="android-chrome-192x192.png" sizes="192x192" />
+  <link rel="icon" href="android-chrome-512x512.png" sizes="512x512" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Noto Sans:wght@400;500;600;700;800&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./digital_marketing_styles.css" />
+  <link rel="stylesheet" href="index.css" />
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q7051CK0RY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Q7051CK0RY');
+  </script>
+</head>
+
+<body>
+  <!-- Include the same navbar from index.html -->
+  <header>
+    <div class="left_container">
+      <a href="index.html" class="left_elements">Home</a>
+      <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
+        class="left_elements" target="_blank">
+        <img src="fb icon.svg" alt="Icon" width="20" height="20" />
+      </a>
+      <a href="https://www.instagram.com/mindsloom2024" class="left_elements" target="_blank">
+        <img src="insta icon.svg" alt="Icon" width="20" height="20" />
+      </a>
+      <a href="https://www.linkedin.com/company/mindsloom/" class="left_elements" target="_blank">
+        <img src="linkedin icon.svg" alt="Icon" width="20" height="20" />
+      </a>
+      <a href="https://x.com/mindsloom" class="left_elements" target="_blank">
+        <img src="twitter icon.svg" alt="Icon" width="20" height="20" />
+      </a>
+    </div>
+
+    <div class="logo">
+      <img class="company-logo" alt="" src="company-logo.png" />
+    </div>
+
+    <!-- Add mobile logo for mobile view -->
+    <div class="mobile-logo">
+      <img class="company-logo" alt="MindsLoom Logo" src="company-logo.png" style="width: 50px; height: auto" />
+    </div>
+
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#services-section">Services</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="#blog-button">Blogs</a></li>
+        <li><a href="#contact-section">Contact Us</a></li>
+      </ul>
+    </nav>
+
+    <!-- Add mobile menu toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+      ☰
+    </button>
+
+    <!-- Add simple mobile dropdown -->
+    <div class="mobile-dropdown" id="mobileDropdown">
+      <div class="mobile-dropdown-header">
+        <img class="mobile-dropdown-logo" alt="MindsLoom Logo" src="company-logo.png" />
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Close mobile menu">
+          ✕
+        </button>
       </div>
 
-      <div class="logo">
-        <img class="company-logo" alt="" src="company-logo.png" />
-      </div>
-
-      <!-- Add mobile logo for mobile view -->
-      <div class="mobile-logo">
-        <img
-          class="company-logo"
-          alt="MindsLoom Logo"
-          src="company-logo.png"
-          style="width: 50px; height: auto"
-        />
-      </div>
-
-      <nav aria-label="Main navigation">
+      <div class="mobile-dropdown-content">
         <ul>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#about-us">About Us</a></li>
           <li><a href="#services-section">Services</a></li>
-          <li><a href="work.html">Our Work</a></li>
+          <li><a href="ailoom.html">AI Loom</a></li>
           <li><a href="#blog-button">Blogs</a></li>
           <li><a href="#contact-section">Contact Us</a></li>
         </ul>
-      </nav>
 
-      <!-- Add mobile menu toggle -->
-      <button
-        class="mobile-menu-toggle"
-        id="mobileMenuToggle"
-        aria-label="Toggle mobile menu"
-      >
-        ☰
-      </button>
+        <div class="mobile-social-links">
+          <a href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
+            target="_blank">
+            <img src="fb icon.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/mindsloom2024" target="_blank">
+            <img src="insta icon.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/company/mindsloom/" target="_blank">
+            <img src="linkedin icon.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://x.com/mindsloom" target="_blank">
+            <img src="twitter icon.svg" alt="Twitter" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Page Content -->
+  <main class="digital_marketing_main">
+    <!-- Hero Section -->
+    <section id="digital_marketing_hero">
+      <div class="digital_market_hero_container">
+        <h1 class="digital_marketing_heading">AI Solutions</h1>
+        <div class="hero_description_wrapper">
+          <p class="digital_marketing_def">
+            At MindsLoom, we create stunning brand identities, logos, and
+            marketing materials that define your business.
+          </p>
+        </div>
+      </div>
+      <hr />
+    </section>
 
-      <!-- Add simple mobile dropdown -->
-      <div class="mobile-dropdown" id="mobileDropdown">
-        <div class="mobile-dropdown-header">
-          <img
-            class="mobile-dropdown-logo"
-            alt="MindsLoom Logo"
-            src="company-logo.png"
-          />
-          <button
-            class="mobile-close-btn"
-            id="mobileCloseBtn"
-            aria-label="Close mobile menu"
-          >
-            ✕
-          </button>
+    <!-- Services Section -->
+    <section id="digital_marketing_services">
+      <div class="services_wrapper">
+        <div class="services_header">
+          <h2 class="digital_marketing_services_heading">Our Services</h2>
+          <p class="digital_marketing_services_para">
+            Accelerate operations with intelligent automation.
+          </p>
         </div>
 
-        <div class="mobile-dropdown-content">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#about-us">About Us</a></li>
-            <li><a href="#services-section">Services</a></li>
-            <li><a href="ailoom.html">AI Loom</a></li>
-            <li><a href="#blog-button">Blogs</a></li>
-            <li><a href="#contact-section">Contact Us</a></li>
-          </ul>
+        <!-- Service Cards -->
+        <div class="card" data-card="1">
+          <div class="card-header">
+            <span class="card-num">01</span>
+            <h3 class="card-heading">AI Chatbots & Virtual Assistants</h3>
+            <button class="toggle-btn" aria-label="Toggle content">+</button>
+          </div>
+          <div class="card-content">
+            <p class="card-content-para">• Google Search & Display Ads</p>
+            <p class="card-content-para">• YouTube Ads</p>
+            <p class="card-content-para">• LinkedIn Ads (for B2B)</p>
+            <p class="card-content-para">• X/Twitter & Pinterest Ads</p>
+          </div>
+        </div>
 
-          <div class="mobile-social-links">
-            <a
-              href="https://www.facebook.com/profile.php?id=61566417231602&mibextid=wwXIfr&mibextid=wwXIfr"
-              target="_blank"
-            >
-              <img src="fb icon.svg" alt="Facebook" />
-            </a>
-            <a href="https://www.instagram.com/mindsloom2024" target="_blank">
-              <img src="insta icon.svg" alt="Instagram" />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/mindsloom/"
-              target="_blank"
-            >
-              <img src="linkedin icon.svg" alt="LinkedIn" />
-            </a>
-            <a href="https://x.com/mindsloom" target="_blank">
-              <img src="twitter icon.svg" alt="Twitter" />
-            </a>
+        <div class="card" data-card="2">
+          <div class="card-header">
+            <span class="card-num">02</span>
+            <h3 class="card-heading">AI Automation for Marketing</h3>
+            <button class="toggle-btn" aria-label="Toggle content">+</button>
+          </div>
+          <div class="card-content">
+            <p class="card-content-para">
+              • Organic Content Strategy (B2B & B2C)
+            </p>
+            <p class="card-content-para">• Content Calendars + Scheduling</p>
+            <p class="card-content-para">
+              • Platform-Specific Execution (IG, LinkedIn, TikTok, X)
+            </p>
+          </div>
+        </div>
+
+        <div class="card" data-card="3">
+          <div class="card-header">
+            <span class="card-num">03</span>
+            <h3 class="card-heading">Data & Workflow Automation</h3>
+            <button class="toggle-btn" aria-label="Toggle content">+</button>
+          </div>
+          <div class="card-content">
+            <p class="card-content-para">• Market & Competitor Research</p>
+            <p class="card-content-para">
+              • Unique Brand Voice & Messaging Frameworks
+            </p>
+          </div>
+        </div>
+
+        <div class="card" data-card="4">
+          <div class="card-header">
+            <span class="card-num">04</span>
+            <h3 class="card-heading">Custom AI Models & Tools</h3>
+            <button class="toggle-btn" aria-label="Toggle content">+</button>
+          </div>
+          <div class="card-content">
+            <p class="card-content-para">
+              • On-Page SEO (Content & Structure)
+            </p>
+            <p class="card-content-para">
+              • Technical SEO (Speed, Indexing, Schema)
+            </p>
           </div>
         </div>
       </div>
-    </header>
-    <!-- Page Content -->
-    <main class="digital_marketing_main">
-      <!-- Hero Section -->
-      <section id="digital_marketing_hero">
-        <div class="digital_market_hero_container">
-          <h1 class="digital_marketing_heading">AI Solutions</h1>
-          <div class="hero_description_wrapper">
-            <p class="digital_marketing_def">
-              At MindsLoom, we create stunning brand identities, logos, and
-              marketing materials that define your business.
+    </section>
+
+    <!--Contact Us Section-->
+
+    <section id="contact-section">
+      <div class="contact-container">
+        <!-- Heading Section -->
+        <div class="form-heading">
+          <h2 class="contact-us">Contact Us</h2>
+          <div class="we-are-at-container">
+            <p class="contact-desc-head">
+              Have an idea, challenge, or vision you’d like to bring to life?
             </p>
           </div>
-        </div>
-        <hr />
-      </section>
-
-      <!-- Services Section -->
-      <section id="digital_marketing_services">
-        <div class="services_wrapper">
-          <div class="services_header">
-            <h2 class="digital_marketing_services_heading">Our Services</h2>
-            <p class="digital_marketing_services_para">
-              Accelerate operations with intelligent automation.
+          <div class="contact-us-at">
+            <p class="contact-desc">
+              Reach out to us via the form or email us directly at
+              business@mindsloom.com. Prefer a quick chat? We're on WhatsApp
+              too let’s connect instantly.
             </p>
           </div>
-
-          <!-- Service Cards -->
-          <div class="card" data-card="1">
-            <div class="card-header">
-              <span class="card-num">01</span>
-              <h3 class="card-heading">AI Chatbots & Virtual Assistants</h3>
-              <button class="toggle-btn" aria-label="Toggle content">+</button>
-            </div>
-            <div class="card-content">
-              <p class="card-content-para">• Google Search & Display Ads</p>
-              <p class="card-content-para">• YouTube Ads</p>
-              <p class="card-content-para">• LinkedIn Ads (for B2B)</p>
-              <p class="card-content-para">• X/Twitter & Pinterest Ads</p>
-            </div>
-          </div>
-
-          <div class="card" data-card="2">
-            <div class="card-header">
-              <span class="card-num">02</span>
-              <h3 class="card-heading">AI Automation for Marketing</h3>
-              <button class="toggle-btn" aria-label="Toggle content">+</button>
-            </div>
-            <div class="card-content">
-              <p class="card-content-para">
-                • Organic Content Strategy (B2B & B2C)
-              </p>
-              <p class="card-content-para">• Content Calendars + Scheduling</p>
-              <p class="card-content-para">
-                • Platform-Specific Execution (IG, LinkedIn, TikTok, X)
-              </p>
-            </div>
-          </div>
-
-          <div class="card" data-card="3">
-            <div class="card-header">
-              <span class="card-num">03</span>
-              <h3 class="card-heading">Data & Workflow Automation</h3>
-              <button class="toggle-btn" aria-label="Toggle content">+</button>
-            </div>
-            <div class="card-content">
-              <p class="card-content-para">• Market & Competitor Research</p>
-              <p class="card-content-para">
-                • Unique Brand Voice & Messaging Frameworks
-              </p>
-            </div>
-          </div>
-
-          <div class="card" data-card="4">
-            <div class="card-header">
-              <span class="card-num">04</span>
-              <h3 class="card-heading">Custom AI Models & Tools</h3>
-              <button class="toggle-btn" aria-label="Toggle content">+</button>
-            </div>
-            <div class="card-content">
-              <p class="card-content-para">
-                • On-Page SEO (Content & Structure)
-              </p>
-              <p class="card-content-para">
-                • Technical SEO (Speed, Indexing, Schema)
-              </p>
-            </div>
+          <div class="whatsapp-button">
+            <button class="whatsapp-btn" onclick="window.location.href='https://wa.me/919792257726'">
+              <img class="whatsapp-icon" src="whatsapp.png" alt="WhatsApp Icon" />
+              WhatsApp
+            </button>
           </div>
         </div>
-      </section>
 
-      <!--Contact Us Section-->
-
-      <section id="contact-section">
-        <div class="contact-container">
-          <!-- Heading Section -->
-          <div class="form-heading">
-            <h2 class="contact-us">Contact Us</h2>
-            <div class="we-are-at-container">
-              <p class="contact-desc-head">
-                Have an idea, challenge, or vision you’d like to bring to life?
-              </p>
-            </div>
-            <div class="contact-us-at">
-              <p class="contact-desc">
-                Reach out to us via the form or email us directly at
-                business@mindsloom.com. Prefer a quick chat? We're on WhatsApp
-                too let’s connect instantly.
-              </p>
-            </div>
-            <div class="whatsapp-button">
-              <button
-                class="whatsapp-btn"
-                onclick="window.location.href='https://wa.me/919792257726'"
-              >
-                <img
-                  class="whatsapp-icon"
-                  src="whatsapp.png"
-                  alt="WhatsApp Icon"
-                />
-                WhatsApp
-              </button>
-            </div>
-          </div>
-
-          <!-- Form Section: Step 1 Basic Details -->
-          <div class="form-section">
-            <div class="form-container">
-              <form class="contact-form" id="contactFormStep1">
-                <div class="full-name">
-                  <label for="name">Full Name *</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div class="mail">
-                  <label for="email">Email Address *</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div class="mobile-number">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone" />
-                </div>
-                <button type="button" id="nextBtn">Next</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Modal Popup for Step 2 -->
-      <div class="modal-overlay" id="formModal">
-        <div class="modal-content">
-          <span class="close-modal" id="closeModal">×</span>
-          <form class="contact-form" id="contactFormStep2">
-            <div class="company-name">
-              <label for="company">Company Name</label>
-              <input type="text" id="company" name="company" />
-            </div>
-            <div class="project-type">
-              <label for="services">Services Interested In *</label>
-              <div class="checkbox-group">
-                <label
-                  ><input type="checkbox" name="services" value="Branding" />
-                  Branding</label
-                >
-                <label
-                  ><input type="checkbox" name="services" value="Web Design" />
-                  Web Design</label
-                >
-                <label
-                  ><input type="checkbox" name="services" value="SEO" />
-                  SEO</label
-                >
-                <label
-                  ><input
-                    type="checkbox"
-                    name="services"
-                    value="Social Media"
-                  />
-                  Social Media</label
-                >
-                <label
-                  ><input type="checkbox" name="services" value="Paid Ads" />
-                  Paid Ads</label
-                >
+        <!-- Form Section: Step 1 Basic Details -->
+        <div class="form-section">
+          <div class="form-container">
+            <form class="contact-form" id="contactFormStep1">
+              <div class="full-name">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" required />
               </div>
-            </div>
-            <div class="project-cost">
-              <label for="budget">Budget Range *</label>
-              <select id="budget" name="budget" required>
-                <option value="">-- Select Budget --</option>
-                <option value="< ₹50K">< ₹50K</option>
-                <option value="₹50K – ₹1L">₹50K – ₹1L</option>
-                <option value="₹1L+">₹1L+</option>
-              </select>
-            </div>
-            <div class="project-timeline">
-              <label for="timeline">Project Timeline *</label>
-              <select id="timeline" name="timeline" required>
-                <option value="">-- Select Timeline --</option>
-                <option value="ASAP">ASAP</option>
-                <option value="1-3 months">1–3 months</option>
-                <option value="Flexible">Flexible</option>
-              </select>
-            </div>
-            <div class="website-link">
-              <label for="website">Website URL</label>
-              <input
-                type="url"
-                id="website"
-                name="website"
-                placeholder="https://example.com"
-              />
-            </div>
-            <div class="referral-source">
-              <label for="referral">How did you hear about us?</label>
-              <input type="text" id="referral" name="referral" />
-            </div>
-            <div class="contact-type">
-              <label for="contact-method">Preferred Contact Method</label>
-              <label
-                ><input
-                  type="radio"
-                  name="contact_method"
-                  value="Email"
-                  checked
-                />
-                Email</label
-              >
-              <label
-                ><input type="radio" name="contact_method" value="Phone" />
-                Phone</label
-              >
-              <label
-                ><input type="radio" name="contact_method" value="WhatsApp" />
-                WhatsApp</label
-              >
-            </div>
-
-            <div class="project-message">
-              <label for="message">Message / Project Description *</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="button" id="submitBtn">Submit</button>
-            <div class="success-message" id="successMessage">
-              Thanks! We'll get back to you within 10 minutes.
-            </div>
-          </form>
+              <div class="mail">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="mobile-number">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              <button type="button" id="nextBtn">Next</button>
+            </form>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!--brand logos loop Section-->
+    <!-- Modal Popup for Step 2 -->
+    <div class="modal-overlay" id="formModal">
+      <div class="modal-content">
+        <span class="close-modal" id="closeModal">×</span>
+        <form class="contact-form" id="contactFormStep2">
+          <div class="company-name">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" />
+          </div>
+          <div class="project-type">
+            <label for="services">Services Interested In *</label>
+            <div class="checkbox-group">
+              <label><input type="checkbox" name="services" value="Branding" />
+                Branding</label>
+              <label><input type="checkbox" name="services" value="Web Design" />
+                Web Design</label>
+              <label><input type="checkbox" name="services" value="SEO" />
+                SEO</label>
+              <label><input type="checkbox" name="services" value="Social Media" />
+                Social Media</label>
+              <label><input type="checkbox" name="services" value="Paid Ads" />
+                Paid Ads</label>
+            </div>
+          </div>
+          <div class="project-cost">
+            <label for="budget">Budget Range *</label>
+            <select id="budget" name="budget" required>
+              <option value="">-- Select Budget --</option>
+              <option value="< ₹50K">
+                < ₹50K</option>
+              <option value="₹50K – ₹1L">₹50K – ₹1L</option>
+              <option value="₹1L+">₹1L+</option>
+            </select>
+          </div>
+          <div class="project-timeline">
+            <label for="timeline">Project Timeline *</label>
+            <select id="timeline" name="timeline" required>
+              <option value="">-- Select Timeline --</option>
+              <option value="ASAP">ASAP</option>
+              <option value="1-3 months">1–3 months</option>
+              <option value="Flexible">Flexible</option>
+            </select>
+          </div>
+          <div class="website-link">
+            <label for="website">Website URL</label>
+            <input type="url" id="website" name="website" placeholder="https://example.com" />
+          </div>
+          <div class="referral-source">
+            <label for="referral">How did you hear about us?</label>
+            <input type="text" id="referral" name="referral" />
+          </div>
+          <div class="contact-type">
+            <label for="contact-method">Preferred Contact Method</label>
+            <label><input type="radio" name="contact_method" value="Email" checked />
+              Email</label>
+            <label><input type="radio" name="contact_method" value="Phone" />
+              Phone</label>
+            <label><input type="radio" name="contact_method" value="WhatsApp" />
+              WhatsApp</label>
+          </div>
 
-      <!-- Logo Flow Section -->
-      <section class="py-16 bg-white" id="logo-flow-section">
-        <div class="container mx-auto px-6">
-          <div
-            class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10"
-          >
-            <h3
-              class="text-md font-bold text-gray-900 text-center mb-8 sm:text-2xl"
-            >
-              Trusted by Industry Leaders
-            </h3>
-            <div class="overflow-hidden relative w-full">
-              <div class="flex logo-scroll">
-                <!-- First set of logos -->
-                <div class="flex items-center flex-shrink-0" style="gap: 3rem">
+          <div class="project-message">
+            <label for="message">Message / Project Description *</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="button" id="submitBtn">Submit</button>
+          <div class="success-message" id="successMessage">
+            Thanks! We'll get back to you within 10 minutes.
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!--brand logos loop Section-->
+
+    <!-- Logo Flow Section -->
+    <section class="py-16 bg-white" id="logo-flow-section">
+      <div class="container mx-auto px-6">
+        <div class="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+          <h3 class="text-md font-bold text-gray-900 text-center mb-8 sm:text-2xl">
+            Trusted by Industry Leaders
+          </h3>
+          <div class="overflow-hidden relative w-full">
+            <div class="flex logo-scroll">
+              <!-- First set of logos -->
+              <div class="flex items-center flex-shrink-0" style="gap: 3rem">
                 <div class="flex items-center flex-shrink-0" style="gap: 3rem">
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
                     <img src="./logos/samsung.png" style="height: 7rem" />
                   </div>
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
                     <img src="./logos/mountain_dew.png" style="height: 7rem" />
                   </div>
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
                     <img src="./logos/bellavita.png" style="height: 10rem" />
                   </div>
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img
-                      src="./logos/doritos.png"
-                      style="height: 8.2rem; width: 80%"
-                    />
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                    <img src="./logos/doritos.png" style="height: 8.2rem; width: 80%" />
                   </div>
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
                     <img src="./logos/kurkure.png" style="height: 8rem" />
                   </div>
                   <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
+                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
                     <img src="./logos/timex.png" style="height: 10rem" />
                   </div>
                 </div>
 
 
                 <!-- Duplicate set for seamless loop -->
-                <div
-                  class="flex items-center flex-shrink-0"
-                  style="gap: 3rem; margin-left: 3rem"
-                >
-                <div
-                  class="flex items-center flex-shrink-0"
-                  style="gap: 3rem; margin-left: 3rem"
-                >
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img src="./logos/samsung.png" style="height: 7rem" />
-                  </div>
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img src="./logos/mountain_dew.png" style="height: 7rem" />
-                  </div>
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img src="./logos/bellavita.png" style="height: 10rem" />
-                  </div>
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img
-                      src="./logos/doritos.png"
-                      style="height: 8.2rem; width: 80%"
-                    />
-                  </div>
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img src="./logos/kurkure.png" style="height: 8rem" />
-                  </div>
-                  <div
-                    class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0"
-                  >
-                    <img src="./logos/timex.png" style="height: 10rem" />
+                <div class="flex items-center flex-shrink-0" style="gap: 3rem; margin-left: 3rem">
+                  <div class="flex items-center flex-shrink-0" style="gap: 3rem; margin-left: 3rem">
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/samsung.png" style="height: 7rem" />
+                    </div>
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/mountain_dew.png" style="height: 7rem" />
+                    </div>
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/bellavita.png" style="height: 10rem" />
+                    </div>
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/doritos.png" style="height: 8.2rem; width: 80%" />
+                    </div>
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/kurkure.png" style="height: 8rem" />
+                    </div>
+                    <div
+                      class="bg-transparent backdrop-blur-sm rounded-2xl p-6 min-w-[120px] h-16 flex items-center justify-center flex-shrink-0">
+                      <img src="./logos/timex.png" style="height: 10rem" />
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
+    </section>
+  </main>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 MindsLoom. All rights reserved.</p>
-    </footer>
-    <!-- Include EmailJS SDK -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
-    <script src="script.js"></script>
-    <script src="digital_marketing_script.js"></script>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MindsLoom. All rights reserved.</p>
+  </footer>
+  <!-- Include EmailJS SDK -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser/dist/email.min.js"></script>
+  <script src="script.js"></script>
+  <script src="digital_marketing_script.js"></script>
+</body>
+
 </html>
