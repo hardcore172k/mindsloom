@@ -30,7 +30,9 @@ main {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  font-family: "jua";
+  font-family: 'Jua', sans-serif;
+  line-height: 1.6;
+  color: #1e2120;
 }
 
 footer {
