@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   console.log("Script loaded successfully");
 
-  emailjs.init("YOUR_PUBLIC_KEY");
+  emailjs.init("Q_Zeib6NyiIsNhTtX");
 
   const nextBtn = document.getElementById("nextBtn");
   const submitBtn = document.getElementById("submitBtn");
@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     try {
       // Send email using EmailJS
-      const result = await emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+      const result = await emailjs.send("service_su9ipp5", "template_ybc68hp", {
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone || "Not provided",
