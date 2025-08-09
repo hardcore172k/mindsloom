@@ -328,6 +328,13 @@ document.addEventListener("DOMContentLoaded", function () {
     submitBtn.disabled = true;
     submitBtn.textContent = "Sending...";
 
+    let websiteValue = formData.website || "Not provided";
+
+    // If the user entered something and it doesn't start with http:// or https://, prepend https://
+    if (websiteValue && !/^https?:\/\//i.test(websiteValue)) {
+      websiteValue = "https://" + websiteValue;
+    }
+
     try {
       // Send email using EmailJS
       const result = await emailjs.send("service_su9ipp5", "template_ybc68hp", {
@@ -338,8 +345,8 @@ document.addEventListener("DOMContentLoaded", function () {
         services: formData.services.join(", ") || "None selected",
         budget: formData.budget,
         timeline: formData.timeline,
-        website: formData.website || "Not provided",
-        referral: formData.referral || "Not provided",
+        website: websiteValue,
+        referral: formData.referral,
         contact_method: formData.contact_method || "Email",
         message: formData.message,
         submission_date: new Date().toLocaleString(),
