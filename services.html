@@ -398,6 +398,7 @@
                     </div>
                     <button
                         class="bg-gradient-btn text-white border-none py-4 px-8 rounded-full font-semibold text-sm lg:text-base cursor-pointer transition-all duration-300 shadow-lg self-start relative overflow-hidden tracking-wide btn-shine hover:bg-gradient-btn-hover hover:text-gray-800 hover:-translate-y-1 hover:shadow-xl active:translate-y-0"
+                        data-link="digital_marketing.html"
                         onclick="handleGetStarted('Marketing')">Get Started</button>
                 </div>
             </div>
@@ -437,6 +438,7 @@
                     </div>
                     <button
                         class="bg-gradient-btn text-white border-none py-4 px-8 rounded-full font-semibold text-sm lg:text-base cursor-pointer transition-all duration-300 shadow-lg self-start relative overflow-hidden tracking-wide btn-shine hover:bg-gradient-btn-hover hover:text-gray-800 hover:-translate-y-1 hover:shadow-xl active:translate-y-0"
+                        data-link="development.html"
                         onclick="handleGetStarted('Development')">Get Started</button>
                 </div>
             </div>
@@ -476,6 +478,7 @@
                     </div>
                     <button
                         class="bg-gradient-btn text-white border-none py-4 px-8 rounded-full font-semibold text-sm lg:text-base cursor-pointer transition-all duration-300 shadow-lg self-start relative overflow-hidden tracking-wide btn-shine hover:bg-gradient-btn-hover hover:text-gray-800 hover:-translate-y-1 hover:shadow-xl active:translate-y-0"
+                        data-link="ai-solutions.html"
                         onclick="handleGetStarted('AI Solutions')">Get Started</button>
                 </div>
             </div>
@@ -516,6 +519,7 @@
                     </div>
                     <button
                         class="bg-gradient-btn text-white border-none py-4 px-8 rounded-full font-semibold text-sm lg:text-base cursor-pointer transition-all duration-300 shadow-lg self-start relative overflow-hidden tracking-wide btn-shine hover:bg-gradient-btn-hover hover:text-gray-800 hover:-translate-y-1 hover:shadow-xl active:translate-y-0"
+                        data-link="design_and_branding.html"
                         onclick="handleGetStarted('Branding')">Get Started</button>
                 </div>
             </div>
@@ -547,39 +551,38 @@
             setTimeout(() => {
                 button.style.transform = 'scale(1) translateY(-3px)';
                 ripple.remove();
-            }, 200);
 
-            // Enhanced alert with service name
-            setTimeout(() => {
-                alert(`🚀 Ready to get started with ${service}? Let's create something amazing together!`);
-            }, 300);
+                // Navigate using the button's data-link
+                const link = button.getAttribute('data-link');
+                window.location.href = link;
+            }, 200);
         }
 
-        // Enhanced loading animation
-        document.addEventListener('DOMContentLoaded', function () {
-            const cards = document.querySelectorAll('.service-card');
-            const heading = document.querySelector('h1');
+            // Enhanced loading animation
+            document.addEventListener('DOMContentLoaded', function () {
+                const cards = document.querySelectorAll('.service-card');
+                const heading = document.querySelector('h1');
 
-            // Animate heading first
-            setTimeout(() => {
-                if (heading) {
-                    heading.style.opacity = '1';
-                    heading.style.transform = 'translateY(0)';
-                }
-            }, 200);
-
-            // Staggered card animations
-            cards.forEach((card, index) => {
+                // Animate heading first
                 setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, 600 + (index * 200));
-            });
-        });
+                    if (heading) {
+                        heading.style.opacity = '1';
+                        heading.style.transform = 'translateY(0)';
+                    }
+                }, 200); 
 
-        // Add ripple animation keyframes
-        const style = document.createElement('style');
-        style.textContent = `
+                // Staggered card animations
+                cards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 600 + (index * 200));
+                });
+            });
+
+            // Add ripple animation keyframes
+            const style = document.createElement('style');
+            style.textContent = `
             @keyframes ripple {
                 to {
                     transform: scale(4);
@@ -587,7 +590,7 @@
                 }
             }
         `;
-        document.head.appendChild(style);
+            document.head.appendChild(style);
     </script>
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'9770b5f0d5af5975',t:'MTc1NjUxOTM5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <!--Contact Us Section-->
@@ -987,59 +990,59 @@
     </footer>
 
     <script>
-        function handleNewsletterSignup(event) {
-            event.preventDefault();
-            const email = event.target.querySelector('input[type="email"]').value;
+            function handleNewsletterSignup(event) {
+                event.preventDefault();
+                const email = event.target.querySelector('input[type="email"]').value;
 
-            // Show success message
-            const button = event.target.querySelector('button');
-            const originalText = button.textContent;
-            button.textContent = 'Subscribed!';
-            button.style.backgroundColor = '#22c55e';
+                // Show success message
+                const button = event.target.querySelector('button');
+                const originalText = button.textContent;
+                button.textContent = 'Subscribed!';
+                button.style.backgroundColor = '#22c55e';
 
-            // Reset after 2 seconds
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.style.backgroundColor = '#4a90e2';
-                event.target.reset();
-            }, 2000);
-        }
+                // Reset after 2 seconds
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.backgroundColor = '#4a90e2';
+                    event.target.reset();
+                }, 2000);
+            }
     </script>
     <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'974da57ab79d5517',t:'MTc1NjE1MTcyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
     <script>
-        (function () {
-            function c() {
-                var b = a.contentDocument || a.contentWindow.document;
-                if (b) {
-                    var d = b.createElement("script");
-                    d.innerHTML =
-                        "window.__CF$cv$params={r:'9673f2c2d51a54c6',t:'MTc1Mzg2ODk5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
-                    b.getElementsByTagName("head")[0].appendChild(d);
+            (function () {
+                function c() {
+                    var b = a.contentDocument || a.contentWindow.document;
+                    if (b) {
+                        var d = b.createElement("script");
+                        d.innerHTML =
+                            "window.__CF$cv$params={r:'9673f2c2d51a54c6',t:'MTc1Mzg2ODk5MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+                        b.getElementsByTagName("head")[0].appendChild(d);
+                    }
                 }
-            }
-            if (document.body) {
-                var a = document.createElement("iframe");
-                a.height = 1;
-                a.width = 1;
-                a.style.position = "absolute";
-                a.style.top = 0;
-                a.style.left = 0;
-                a.style.border = "none";
-                a.style.visibility = "hidden";
-                document.body.appendChild(a);
-                if ("loading" !== document.readyState) c();
-                else if (window.addEventListener)
-                    document.addEventListener("DOMContentLoaded", c);
-                else {
-                    var e = document.onreadystatechange || function () { };
-                    document.onreadystatechange = function (b) {
-                        e(b);
-                        "loading" !== document.readyState &&
-                            ((document.onreadystatechange = e), c());
-                    };
+                if (document.body) {
+                    var a = document.createElement("iframe");
+                    a.height = 1;
+                    a.width = 1;
+                    a.style.position = "absolute";
+                    a.style.top = 0;
+                    a.style.left = 0;
+                    a.style.border = "none";
+                    a.style.visibility = "hidden";
+                    document.body.appendChild(a);
+                    if ("loading" !== document.readyState) c();
+                    else if (window.addEventListener)
+                        document.addEventListener("DOMContentLoaded", c);
+                    else {
+                        var e = document.onreadystatechange || function () { };
+                        document.onreadystatechange = function (b) {
+                            e(b);
+                            "loading" !== document.readyState &&
+                                ((document.onreadystatechange = e), c());
+                        };
+                    }
                 }
-            }
-        })();
+            })();
     </script>
 </body>
 
