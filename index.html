@@ -850,25 +850,122 @@
     </div>
   </footer>
 
-  <script>
-    function handleNewsletterSignup(event) {
-      event.preventDefault();
-      const email = event.target.querySelector('input[type="email"]').value;
+  <!-- Cookie Consent Banner -->
+<div id="cookieBanner"
+  class="fixed bottom-0 left-0 right-0 bg-white border-t border-emerald-200 shadow-2xl p-4 z-[1000] opacity-0 transition-opacity duration-500">
+  <div class="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
+    <div class="flex-1">
+      <p class="text-slate-700 text-sm">
+        🍪 We use cookies to enhance your experience. By continuing to visit this site you agree to our use of
+        cookies.
+        <a href="/cookie-policy.html" class="text-emerald-600 hover:text-emerald-700 underline ml-1">Learn more</a>
+      </p>
+    </div>
+    <div class="flex gap-3">
+      <button onclick="acceptCookies()"
+        class="bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+        Accept All
+      </button>
+      <button onclick="customizeCookies()"
+        class="bg-amber-600 hover:bg-amber-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+        Customize
+      </button>
+      <button onclick="rejectCookies()"
+        class="bg-slate-600 hover:bg-slate-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200">
+        Essential Only
+      </button>
+    </div>
+  </div>
+</div>
 
-      // Show success message
-      const button = event.target.querySelector('button');
-      const originalText = button.textContent;
-      button.textContent = 'Subscribed!';
-      button.style.backgroundColor = '#22c55e';
+<script>
+(function () {
+  const banner = document.getElementById('cookieBanner');
+  const loader = document.getElementById('loader'); // your loader element
 
-      // Reset after 2 seconds
-      setTimeout(() => {
-        button.textContent = originalText;
-        button.style.backgroundColor = '#4a90e2';
-        event.target.reset();
-      }, 2000);
+  function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24*60*60*1000));
+    document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+  }
+
+  function getCookie(name) {
+    const cookieArr = document.cookie.split("; ");
+    for (let cookie of cookieArr) {
+      const [key, value] = cookie.split("=");
+      if (key === name) return value;
     }
-  </script>
+    return null;
+  }
+
+  function hideBanner() {
+    banner.style.opacity = '0';
+    setTimeout(() => { banner.style.display = 'none'; }, 500);
+  }
+
+  window.acceptCookies = function () {
+    setCookie('cookiesAccepted', 'all', 365);
+    hideBanner();
+    console.log('All cookies accepted');
+  };
+
+  window.rejectCookies = function () {
+    setCookie('cookiesAccepted', 'essential', 365);
+    hideBanner();
+    console.log('Only essential cookies accepted');
+  };
+
+  window.customizeCookies = function () {
+    setCookie('cookiesAccepted', 'custom', 365);
+    hideBanner();
+    alert('Cookie customization panel would open here');
+  };
+
+  function showBannerAfterLoader() {
+    if (getCookie('cookiesAccepted')) {
+      banner.style.display = 'none';
+      return;
+    }
+
+    const checkLoader = setInterval(() => {
+      if (!loader || loader.style.display === 'none') {
+        banner.style.display = 'block';
+        setTimeout(() => { banner.style.opacity = '1'; }, 50); // fade-in effect
+        clearInterval(checkLoader);
+
+        // Auto-hide after 15 seconds if no action
+        setTimeout(() => {
+          if (!getCookie('cookiesAccepted')) {
+            hideBanner();
+          }
+        }, 15000);
+      }
+    }, 100);
+  }
+
+  showBannerAfterLoader();
+})();
+</script>
+<script>
+function handleNewsletterSignup(event) {
+  event.preventDefault();
+  const email = event.target.querySelector('input[type="email"]').value;
+
+  // Show success message
+  const button = event.target.querySelector('button');
+  const originalText = button.textContent;
+  button.textContent = 'Subscribed!';
+  button.style.backgroundColor = '#22c55e';
+
+  // Reset after 2 seconds
+  setTimeout(() => {
+    button.textContent = originalText;
+    button.style.backgroundColor = '#4a90e2';
+    event.target.reset();
+  }, 2000);
+}
+</script>
+  <!-- Cloudflare Script -->
   <script>(function () { function c() { var b = a.contentDocument || a.contentWindow.document; if (b) { var d = b.createElement('script'); d.innerHTML = "window.__CF$cv$params={r:'974da57ab79d5517',t:'MTc1NjE1MTcyMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);"; b.getElementsByTagName('head')[0].appendChild(d) } } if (document.body) { var a = document.createElement('iframe'); a.height = 1; a.width = 1; a.style.position = 'absolute'; a.style.top = 0; a.style.left = 0; a.style.border = 'none'; a.style.visibility = 'hidden'; document.body.appendChild(a); if ('loading' !== document.readyState) c(); else if (window.addEventListener) document.addEventListener('DOMContentLoaded', c); else { var e = document.onreadystatechange || function () { }; document.onreadystatechange = function (b) { e(b); 'loading' !== document.readyState && (document.onreadystatechange = e, c()) } } } })();</script>
 </body>
 <!-- Include EmailJS SDK -->
